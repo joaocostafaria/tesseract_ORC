@@ -74,8 +74,7 @@ def imprimir_medidas():
             result_1_unidades = pytesseract.image_to_string(
                 crop_image_1_unidades, config='--psm 8 digits -c tessedit_char_whitelist=1234567890')
             if result_1_unidades[0:1] == str(0):
-                crop_image_1_unidades = crop_image_1[(q + (412 - numero_quadros + 3)):(a + 340),
-                                        (z + 850):(p + 402)]
+                crop_image_1_unidades = crop_image_1[(q + (412 - numero_quadros + 3)):(a + 340), (z + 850):(p + 402)]
                 crop_image_1_unidades = cv.fastNlMeansDenoisingColored(crop_image_1_unidades, None, 10, 10, 7, 21)
                 kernel_1 = cv.getStructuringElement(cv.MORPH_RECT, (3, 3))
                 crop_image_1_unidades = cv.morphologyEx(crop_image_1_unidades, cv.MORPH_CLOSE, kernel_1)
@@ -316,8 +315,7 @@ def imprimir_medidas():
             result_1_unidades = pytesseract.image_to_string(
                 crop_image_1_unidades, config='--psm 8 digits -c tessedit_char_whitelist=1234567890')
             if result_1_unidades[0:1] == str(0):
-                crop_image_1_unidades = crop_image_1[(q + (412 - numero_quadros + 3)):(a + 340),
-                                        (z + 850):(p + 402)]
+                crop_image_1_unidades = crop_image_1[(q + (412 - numero_quadros + 3)):(a + 340), (z + 850):(p + 402)]
                 crop_image_1_unidades = cv.fastNlMeansDenoisingColored(crop_image_1_unidades, None, 10, 10, 7, 21)
                 kernel_1 = cv.getStructuringElement(cv.MORPH_RECT, (3, 3))
                 crop_image_1_unidades = cv.morphologyEx(crop_image_1_unidades, cv.MORPH_CLOSE, kernel_1)
@@ -584,6 +582,7 @@ def botao_executar():
         # Cor 7
         texto_cores_impressao_7 = cb_cores_impressao_7.get()
         sheet.write('A21', texto_cores_impressao_7)
+        sheet.write('B1', usertess)
         novo_y_1 = int(num_novos_y)
         if 1 <= numero_quadros:
             crop_image_1 = img1[0:novo_y_1]
@@ -600,6 +599,8 @@ def botao_executar():
                 file.write(result_1_dimensoes)
                 # Escrever informação extraida(Celula A1 do documento Excel) no documento Excel
                 sheet.write('A1', result_1_dimensoes)
+                print(result_1_dimensoes)
+                cv.imwrite(r'C:\Users\joaoccfaria\Desktop\AUTO_ORC\App ORC\crop_image_1_dimensoes.jpg', crop_image_1_dimensoes)
             # Unidades_1
             crop_image_1_unidades = crop_image_1[(q + (412 - numero_quadros+3)):(a + 340), (z + 850):(p + 402)]
             crop_image_1_unidades = cv.fastNlMeansDenoisingColored(crop_image_1_unidades, None, 10, 10, 7, 21)
@@ -621,8 +622,7 @@ def botao_executar():
                 result_1_unidades = pytesseract.image_to_string(
                     crop_image_1_unidades, config='--psm 8 digits -c tessedit_char_whitelist=1234567890')
                 if result_1_unidades[0:1] == str(0):
-                    crop_image_1_unidades = crop_image_1[(q + (412 - numero_quadros + 3)):(a + 340),
-                                            (z + 850):(p + 402)]
+                    crop_image_1_unidades = crop_image_1[(q + (412 - numero_quadros + 3)):(a + 340), (z + 850):(p + 402)]
                     crop_image_1_unidades = cv.fastNlMeansDenoisingColored(crop_image_1_unidades, None, 10, 10, 7, 21)
                     kernel_1 = cv.getStructuringElement(cv.MORPH_RECT, (3, 3))
                     crop_image_1_unidades = cv.morphologyEx(crop_image_1_unidades, cv.MORPH_CLOSE, kernel_1)
@@ -637,6 +637,8 @@ def botao_executar():
             with open('abc.txt', mode='w') as file:
                 file.write(result_1_unidades)
                 sheet.write('A2', result_1_unidades)
+                print(result_1_unidades)
+                cv.imwrite(r'C:\Users\joaoccfaria\Desktop\AUTO_ORC\App ORC\crop_image_1_unidades.jpg', crop_image_1_unidades)
             # cliche_1
             crop_image_1_cliche = crop_image_1[(q + 660):(a + 1100), z:(p - 240)]
             crop_image_1_cliche = cv.cvtColor(crop_image_1_cliche, cv.COLOR_BGR2GRAY)
@@ -646,6 +648,8 @@ def botao_executar():
             with open('abc.txt', mode='w') as file:
                 file.write(result_1_cliche)
                 sheet.write('A3', result_1_cliche)
+                print(result_1_cliche)
+                cv.imwrite(r'C:\Users\joaoccfaria\Desktop\AUTO_ORC\App ORC\crop_image_1_cliche.jpg', crop_image_1_cliche)
             # Tinta_1
             crop_image_1_tinta = crop_image_1[(q - 200):(a + 400), (z + 3530):(p + 3030)]
             crop_image_1_tinta = cv.fastNlMeansDenoisingColored(crop_image_1_tinta, None, 10, 10, 7, 21)
@@ -660,6 +664,8 @@ def botao_executar():
             with open('abc.txt', mode='w') as file:
                 file.write(result_1_tinta)
                 sheet.write('A4', result_1_tinta)
+                print(result_1_tinta)
+                cv.imwrite(r'C:\Users\joaoccfaria\Desktop\AUTO_ORC\App ORC\crop_image_1_tinta.jpg', crop_image_1_tinta)
             # n_cores_1
             crop_image_1_n_cores = crop_image_1[(q - 2500):(a - 250), (z + 5480):(p + 4920)]
             crop_image_1_n_cores = cv.fastNlMeansDenoisingColored(crop_image_1_n_cores, None, 10, 10, 7, 21)
@@ -673,6 +679,8 @@ def botao_executar():
             with open('abc.txt', mode='w') as file:
                 file.write(result_1_n_cores)
                 sheet.write('A5', result_1_n_cores)
+                print(result_1_n_cores)
+                cv.imwrite(r'C:\Users\joaoccfaria\Desktop\AUTO_ORC\App ORC\crop_image_1_n_cores.jpg', crop_image_1_n_cores)
             # n_caixas_1
             crop_image_1_n_caixas = crop_image_1[(q + 270):(a + 200), (z + 80):(p - 570)]
             pytesseract.pytesseract.tesseract_cmd = Path(j)
@@ -680,6 +688,8 @@ def botao_executar():
             with open('abc.txt', mode='w') as file:
                 file.write(result_1_n_caixas)
                 sheet.write('A6', result_1_n_caixas)
+                print(result_1_n_caixas)
+                cv.imwrite(r'C:\Users\joaoccfaria\Desktop\AUTO_ORC\App ORC\crop_image_1_n_caixas.jpg', crop_image_1_n_caixas)
             # tipo_clientes_1
             crop_image_1_tipo_clientes = crop_image_1[(q - 190):(a - 250), (z + 5980):(p + 5730)]
             crop_image_1_tipo_clientes = cv.fastNlMeansDenoisingColored(crop_image_1_tipo_clientes, None, 10, 10, 7, 21)
@@ -692,6 +702,8 @@ def botao_executar():
             with open('abc.txt', mode='w') as file:
                 file.write(result_1_tipo_clientes)
                 sheet.write('A7', result_1_tipo_clientes)
+                print(result_1_tipo_clientes)
+                cv.imwrite(r'C:\Users\joaoccfaria\Desktop\AUTO_ORC\App ORC\crop_image_1_tipo_clientes.jpg', crop_image_1_tipo_clientes)
             # Servicos_1
             crop_image_1_servicos_1 = crop_image_1[(q + 270):(a + 3690), (z + 5250):(p + 5100)]
             pytesseract.pytesseract.tesseract_cmd = Path(j)
@@ -699,6 +711,8 @@ def botao_executar():
             with open('abc.txt', mode='w') as file:
                 file.write(result_1_servicos_1)
                 sheet.write('A8', result_1_servicos_1)
+                print(result_1_servicos_1)
+                cv.imwrite(r'C:\Users\joaoccfaria\Desktop\AUTO_ORC\App ORC\crop_image_1_servicos_1.jpg', crop_image_1_servicos_1)
             # Servicos_2_1
             crop_image_1_servicos_2 = crop_image_1[(q + 270):(a + 3690), (z + 5950):(p + 5700)]
             pytesseract.pytesseract.tesseract_cmd = Path(j)
@@ -706,6 +720,8 @@ def botao_executar():
             with open('abc.txt', mode='w') as file:
                 file.write(result_1_servicos_2)
                 sheet.write('A9', result_1_servicos_2)
+                print(result_1_servicos_2)
+                cv.imwrite(r'C:\Users\joaoccfaria\Desktop\AUTO_ORC\App ORC\crop_image_1_servicos_2.jpg', crop_image_1_servicos_2)
             # Caixas_1_1
             crop_image_1_caixas = crop_image_1[(q - 965):(a + 3000), (z + 550):(p - 20)]
             crop_image_1_caixas = cv.cvtColor(crop_image_1_caixas, cv.COLOR_BGR2GRAY)
@@ -717,6 +733,8 @@ def botao_executar():
             with open('abc.txt', mode='w') as file:
                 file.write(result_1_caixas)
                 sheet.write('A10', result_1_caixas)
+                print(result_1_caixas)
+                cv.imwrite(r'C:\Users\joaoccfaria\Desktop\AUTO_ORC\App ORC\crop_image_1_caixas.jpg', crop_image_1_caixas)
             # Total_1
             crop_image_1_total = crop_image_1[(q + 1000):(a + 1120), (z + 2700):(p + 2620)]
             crop_image_1_total = cv.cvtColor(crop_image_1_total, cv.COLOR_BGR2GRAY)
@@ -728,6 +746,8 @@ def botao_executar():
             with open('abc.txt', mode='w') as file:
                 file.write(result_1_total)
                 sheet.write('A11', result_1_total)
+                print(result_1_total)
+                cv.imwrite(r'C:\Users\joaoccfaria\Desktop\AUTO_ORC\App ORC\crop_image_1_total.jpg', crop_image_1_total)
                 if result_1_total[0:1] == str(9):
                     crop_image_1_total = crop_image_1[(q + 1000):(a + 1120), (z + 2700):(p + 2620)]
                     crop_image_1_total = cv.cvtColor(crop_image_1_total, cv.COLOR_BGR2GRAY)
@@ -738,6 +758,9 @@ def botao_executar():
                     with open('abc.txt', mode='w') as file:
                         file.write(result_1_total)
                         sheet.write('A11', result_1_total)
+                        print(result_1_total)
+                        cv.imwrite(r'C:\Users\joaoccfaria\Desktop\AUTO_ORC\App ORC\crop_image_1_total.jpg',
+                                   crop_image_1_total)
             # Espessura_1
             crop_image_1_espessura = crop_image_1[(q + 60):(a + 100), (z + 5250):(p + 5700)]
             pytesseract.pytesseract.tesseract_cmd = Path(j)
@@ -745,6 +768,8 @@ def botao_executar():
             with open('abc.txt', mode='w') as file:
                 file.write(result_1_espessura)
                 sheet.write('A12', result_1_espessura)
+                print(result_1_espessura)
+                cv.imwrite(r'C:\Users\joaoccfaria\Desktop\AUTO_ORC\App ORC\crop_image_1_espessura.jpg', crop_image_1_espessura)
             # Cor_1_1
             crop_image_1_1_cor = crop_image_1[(q - 230):(a - 260), (z + 6575):(p + 6225)]
             crop_image_1_1_cor = cv.fastNlMeansDenoisingColored(crop_image_1_1_cor, None, 10, 10, 7, 21)
@@ -757,6 +782,8 @@ def botao_executar():
             with open('abc.txt', mode='w') as file:
                 file.write(result_1_1_cor)
                 sheet.write('B13', result_1_1_cor)
+                print(result_1_1_cor)
+                cv.imwrite(r'C:\Users\joaoccfaria\Desktop\AUTO_ORC\App ORC\crop_image_1_1_cor.jpg', crop_image_1_1_cor)
             # Cor_2_1
             crop_image_1_2_cor = crop_image_1[(q + 90):(a + 60), (z + 6575):(p + 6225)]
             crop_image_1_2_cor = cv.fastNlMeansDenoisingColored(crop_image_1_2_cor, None, 10, 10, 7, 21)
@@ -769,6 +796,8 @@ def botao_executar():
             with open('abc.txt', mode='w') as file:
                 file.write(result_1_2_cor)
                 sheet.write('C13', result_1_2_cor)
+                print(result_1_2_cor)
+                cv.imwrite(r'C:\Users\joaoccfaria\Desktop\AUTO_ORC\App ORC\crop_image_1_2_cor.jpg', crop_image_1_2_cor)
             # Cor_3_1
             crop_image_1_3_cor = crop_image_1[(q + 400):(a + 380), (z + 6575):(p + 6225)]
             crop_image_1_3_cor = cv.fastNlMeansDenoisingColored(crop_image_1_3_cor, None, 10, 10, 7, 21)
@@ -781,6 +810,8 @@ def botao_executar():
             with open('abc.txt', mode='w') as file:
                 file.write(result_1_3_cor)
                 sheet.write('D13', result_1_3_cor)
+                print(result_1_3_cor)
+                cv.imwrite(r'C:\Users\joaoccfaria\Desktop\AUTO_ORC\App ORC\crop_image_1_3_cor.jpg', crop_image_1_3_cor)
             # Cor_4_1
             crop_image_1_4_cor = crop_image_1[(q + 740):(a + 690), (z + 6585):(p + 6215)]
             crop_image_1_4_cor = cv.fastNlMeansDenoisingColored(crop_image_1_4_cor, None, 10, 10, 7, 21)
@@ -793,6 +824,8 @@ def botao_executar():
             with open('abc.txt', mode='w') as file:
                 file.write(result_1_4_cor)
                 sheet.write('E13', result_1_4_cor)
+                print(result_1_4_cor)
+                cv.imwrite(r'C:\Users\joaoccfaria\Desktop\AUTO_ORC\App ORC\crop_image_1_4_cor.jpg', crop_image_1_4_cor)
             # Cor_5_1
             crop_image_1_5_cor = crop_image_1[(q + 1010):(a + 970), (z + 6575):(p + 6225)]
             crop_image_1_5_cor = cv.fastNlMeansDenoisingColored(crop_image_1_5_cor, None, 10, 10, 7, 21)
@@ -805,6 +838,8 @@ def botao_executar():
             with open('abc.txt', mode='w') as file:
                 file.write(result_1_5_cor)
                 sheet.write('F13', result_1_5_cor)
+                print(result_1_5_cor)
+                cv.imwrite(r'C:\Users\joaoccfaria\Desktop\AUTO_ORC\App ORC\crop_image_1_5_cor.jpg', crop_image_1_5_cor)
             # Cor_6_1
             crop_image_1_6_cor = crop_image_1[(q + 1290):(a + 1240), (z + 6575):(p + 6205)]
             crop_image_1_6_cor = cv.fastNlMeansDenoisingColored(crop_image_1_6_cor, None, 10, 10, 7, 21)
@@ -817,6 +852,8 @@ def botao_executar():
             with open('abc.txt', mode='w') as file:
                 file.write(result_1_6_cor)
                 sheet.write('G13', result_1_6_cor)
+                print(result_1_6_cor)
+                cv.imwrite(r'C:\Users\joaoccfaria\Desktop\AUTO_ORC\App ORC\crop_image_1_6_cor.jpg', crop_image_1_6_cor)
             # Cor_fabricada_1
             crop_image_fabricada_cor = crop_image_1[(q + 1535):(a + 1680), (z + 6575):(p + 6225)]
             crop_image_fabricada_cor = cv.fastNlMeansDenoisingColored(crop_image_fabricada_cor, None, 10, 10, 7, 21)
@@ -829,6 +866,8 @@ def botao_executar():
             with open('abc.txt', mode='w') as file:
                 file.write(result_fabricada_cor)
                 sheet.write('H13', result_fabricada_cor)
+                print(result_fabricada_cor)
+                cv.imwrite(r'C:\Users\joaoccfaria\Desktop\AUTO_ORC\App ORC\crop_image_fabricada_cor.jpg', crop_image_fabricada_cor)
 
         if 2 <= numero_quadros:
             crop_image_2 = img1[novo_y_1:novo_y_1*2]
@@ -1684,7 +1723,7 @@ def botao_executar():
                 file.write(result_5_servicos_2)
                 sheet.write('A93', result_5_servicos_2)
             # Caixas_1_5
-            crop_image_5_caixas = crop_image_1[(q - 965):(a + 3000), (z + 550):(p - 20)]
+            crop_image_5_caixas = crop_image_5[(q - 965):(a + 3000), (z + 550):(p - 20)]
             crop_image_5_caixas = cv.cvtColor(crop_image_5_caixas, cv.COLOR_BGR2GRAY)
             kernel_5 = cv.getStructuringElement(cv.MORPH_RECT, (3, 3))
             crop_image_5_caixas = cv.morphologyEx(crop_image_5_caixas, cv.MORPH_CLOSE, kernel_5)
@@ -6490,7 +6529,19 @@ def botao_executar():
         workbook.close()
         x = str(Path('C:', '/', 'Users'))
         y = str(Path(gt.getuser(), '/', gt.getuser()))
-        z = "\Desktop\AUTO_ORC\Caracteristricas_ORC.xlsx"
+        z = "\Desktop\AUTO_ORC\App ORC\Caracteristricas_ORC.xlsx"
+        a = x + y + z
+        absolutepath = Path(a).resolve()
+        os.system(f'start excel.exe "{absolutepath}"')
+        x = str(Path('C:', '/', 'Users'))
+        y = str(Path(gt.getuser(), '/', gt.getuser()))
+        z = "\Desktop\AUTO_ORC\App ORC\Caracteristricas_ORC_formulas.xlsx"
+        a = x + y + z
+        absolutepath = Path(a).resolve()
+        os.system(f'start excel.exe "{absolutepath}"')
+        x = str(Path('C:', '/', 'Users'))
+        y = str(Path(gt.getuser(), '/', gt.getuser()))
+        z = "\Desktop\AUTO_ORC\App ORC\Calculo_Orçamento_Original.xlsx"
         a = x + y + z
         absolutepath = Path(a).resolve()
         os.system(f'start excel.exe "{absolutepath}"')
