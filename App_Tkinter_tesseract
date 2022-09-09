@@ -523,6 +523,13 @@ def imprimir_medidas():
 
 
 def botao_executar():
+    ctess = str(Path('C:', '/', 'Users'))
+    usertess = str(Path(gt.getuser(), '/', gt.getuser()))
+    apptess = "\AppData\Local\Programs\Tesseract-OCR/tesseract.exe"
+    global j
+    j = ctess + usertess + apptess
+    global img1
+    img1 = cv.imread('imagemfinal.jpg')
     if cb_tipos_artigo.get() == '42':
         # Preço de compra para o Excel
         # Alterar todos
@@ -10168,8 +10175,11 @@ cb_cores_impressao_7.pack(ipadx=8)
 # Artigo prédefinido
 cb_cores_impressao_7.set('Manter')
 # Botao Abrir Janela
-botao_abrir_janela = Button(menu_1, text='Carregar documento', command=lambda: [abrir_janela(), extrair_quadros()])
-botao_abrir_janela.place(x=250, y=700, width=150, height=50)
+botao_abrir_janela = Button(menu_1, text='CARREGAR PARA FILTRAR', command=lambda: [abrir_janela(), extrair_quadros()])
+botao_abrir_janela.place(x=320, y=700, width=150, height=50)
+# Botao Extrair para o Excel
+botao_abrir_janela = Button(menu_1, text='EXTRAIR PARA EXCEL', command=lambda: [extrair_quadros(), botao_executar()])
+botao_abrir_janela.place(x=150, y=700, width=150, height=50)
 # Variaveis
 v_dimensoes = IntVar(value=1)
 v_unidades = IntVar(value=1)
