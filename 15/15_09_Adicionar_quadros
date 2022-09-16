@@ -11516,7 +11516,7 @@ cb_tipos_artigo.pack()
 # Alterar todos
 # Preço de Embalagens
 quadro_lb_embalagens = Frame(menu_1, borderwidth=1, relief='solid')
-quadro_lb_embalagens.place(x=70, y=505, width=300, height=140)
+quadro_lb_embalagens.place(x=120, y=505, width=300, height=140)
 # titulo Quantidades
 Label(quadro_lb_embalagens, text='Quantidades', anchor=W).place(x=80, y=2, width=100, height=20)
 # titulo Preço unitário
@@ -11578,7 +11578,7 @@ preco_portes_p1.place(x=190, y=100, width=90, height=20)
 # Alterar todos
 # Preço de compra
 quadro_lb_preco_compra = Frame(menu_1, borderwidth=1, relief='solid')
-quadro_lb_preco_compra.place(x=70, y=440, width=300, height=60)
+quadro_lb_preco_compra.place(x=120, y=440, width=300, height=60)
 
 # titulo da entrada preço de compra
 Label(quadro_lb_preco_compra, text='Preço de Compra', anchor=W).place(x=20, y=0, width=100, height=20)
@@ -11598,7 +11598,7 @@ espessura.insert(0, "Manter")
 
 # Cores da Impressão
 quadro_lb_cores_impressao = Frame(menu_1, borderwidth=1, relief='solid')
-quadro_lb_cores_impressao.place(x=410, y=440, width=120, height=205)
+quadro_lb_cores_impressao.place(x=440, y=440, width=120, height=205)
 # Titulo quadro validação de dados Cores da Impressão
 lb_cores_impressao = Label(quadro_lb_cores_impressao, text='Cores da Impressão', height=2)
 lb_cores_impressao.pack()
