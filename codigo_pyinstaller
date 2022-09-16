@@ -1,0 +1,1 @@
+pyinstaller --onefile --windowed --icon="C:\Users\joaoccfaria\Desktop\AUTO_ORC\iconapp.ico" --add-data "C:\Users\joaoccfaria\AppData\Local\Programs\Python\Python310\Lib\site-packages\tkinterdnd2;tkinterdnd2" ORC_42_90.py
