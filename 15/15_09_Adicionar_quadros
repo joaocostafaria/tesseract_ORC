@@ -2177,7 +2177,7 @@ def botao_executar():
                 file.write(result_7_servicos_2)
                 sheet.write('A135', result_7_servicos_2)
             # Caixas_1_7
-            crop_image_7_caixas = crop_image_1[(q - 965):(a + 3000), (z + 550):(p - 20)]
+            crop_image_7_caixas = crop_image_7[(q - 965):(a + 3000), (z + 550):(p - 20)]
             crop_image_7_caixas = cv.cvtColor(crop_image_7_caixas, cv.COLOR_BGR2GRAY)
             kernel_7 = cv.getStructuringElement(cv.MORPH_RECT, (3, 3))
             crop_image_7_caixas = cv.morphologyEx(crop_image_7_caixas, cv.MORPH_CLOSE, kernel_7)
@@ -3326,8 +3326,7 @@ def botao_executar():
                 result_12_unidades = pytesseract.image_to_string(
                     crop_image_12_unidades, config='--psm 8 digits -c tessedit_char_whitelist=1234567890')
                 if result_12_unidades[0:1] == str(0):
-                    crop_image_12_unidades = crop_image_12[(q + (412 - numero_quadros + 3)):(a + 340),
-                                            (z + 850):(p + 402)]
+                    crop_image_12_unidades = crop_image_12[(q + (412 - numero_quadros + 3)):(a + 340), (z + 850):(p + 402)]
                     crop_image_12_unidades = cv.fastNlMeansDenoisingColored(crop_image_12_unidades, None, 10, 10, 7, 21)
                     kernel_12 = cv.getStructuringElement(cv.MORPH_RECT, (3, 3))
                     crop_image_12_unidades = cv.morphologyEx(crop_image_12_unidades, cv.MORPH_CLOSE, kernel_12)
@@ -3417,8 +3416,7 @@ def botao_executar():
             kernel_12 = cv.getStructuringElement(cv.MORPH_RECT, (3, 3))
             crop_image_12_caixas = cv.morphologyEx(crop_image_12_caixas, cv.MORPH_CLOSE, kernel_12)
             pytesseract.pytesseract.tesseract_cmd = Path(j)
-            result_12_caixas = pytesseract.image_to_string(crop_image_12_caixas,
-                                                            config='--psm 6 -c tessedit_char_whitelist=0123456789,€')
+            result_12_caixas = pytesseract.image_to_string(crop_image_12_caixas, config='--psm 6 -c tessedit_char_whitelist=0123456789,€')
             with open('abc.txt', mode='w') as file:
                 file.write(result_12_caixas)
                 sheet.write('A241', result_12_caixas)
@@ -3571,8 +3569,7 @@ def botao_executar():
                 result_13_unidades = pytesseract.image_to_string(
                     crop_image_13_unidades, config='--psm 8 digits -c tessedit_char_whitelist=1234567890')
                 if result_13_unidades[0:1] == str(0):
-                    crop_image_13_unidades = crop_image_13[(q + (412 - numero_quadros + 3)):(a + 340),
-                                            (z + 850):(p + 402)]
+                    crop_image_13_unidades = crop_image_13[(q + (412 - numero_quadros + 3)):(a + 340), (z + 850):(p + 402)]
                     crop_image_13_unidades = cv.fastNlMeansDenoisingColored(crop_image_13_unidades, None, 10, 10, 7, 21)
                     kernel_13 = cv.getStructuringElement(cv.MORPH_RECT, (3, 3))
                     crop_image_13_unidades = cv.morphologyEx(crop_image_13_unidades, cv.MORPH_CLOSE, kernel_13)
@@ -3662,8 +3659,7 @@ def botao_executar():
             kernel_13 = cv.getStructuringElement(cv.MORPH_RECT, (3, 3))
             crop_image_13_caixas = cv.morphologyEx(crop_image_13_caixas, cv.MORPH_CLOSE, kernel_13)
             pytesseract.pytesseract.tesseract_cmd = Path(j)
-            result_13_caixas = pytesseract.image_to_string(crop_image_13_caixas,
-                                                            config='--psm 6 -c tessedit_char_whitelist=0123456789,€')
+            result_13_caixas = pytesseract.image_to_string(crop_image_13_caixas, config='--psm 6 -c tessedit_char_whitelist=0123456789,€')
             with open('abc.txt', mode='w') as file:
                 file.write(result_13_caixas)
                 sheet.write('A262', result_13_caixas)
@@ -3816,8 +3812,7 @@ def botao_executar():
                 result_14_unidades = pytesseract.image_to_string(
                     crop_image_14_unidades, config='--psm 8 digits -c tessedit_char_whitelist=1234567890')
                 if result_14_unidades[0:1] == str(0):
-                    crop_image_14_unidades = crop_image_14[(q + (412 - numero_quadros + 3)):(a + 340),
-                                            (z + 850):(p + 402)]
+                    crop_image_14_unidades = crop_image_14[(q + (412 - numero_quadros + 3)):(a + 340), (z + 850):(p + 402)]
                     crop_image_14_unidades = cv.fastNlMeansDenoisingColored(crop_image_14_unidades, None, 10, 10, 7, 21)
                     kernel_14 = cv.getStructuringElement(cv.MORPH_RECT, (3, 3))
                     crop_image_14_unidades = cv.morphologyEx(crop_image_14_unidades, cv.MORPH_CLOSE, kernel_14)
@@ -3907,8 +3902,7 @@ def botao_executar():
             kernel_14 = cv.getStructuringElement(cv.MORPH_RECT, (3, 3))
             crop_image_14_caixas = cv.morphologyEx(crop_image_14_caixas, cv.MORPH_CLOSE, kernel_14)
             pytesseract.pytesseract.tesseract_cmd = Path(j)
-            result_14_caixas = pytesseract.image_to_string(crop_image_14_caixas,
-                                                            config='--psm 6 -c tessedit_char_whitelist=0123456789,€')
+            result_14_caixas = pytesseract.image_to_string(crop_image_14_caixas, config='--psm 6 -c tessedit_char_whitelist=0123456789,€')
             with open('abc.txt', mode='w') as file:
                 file.write(result_14_caixas)
                 sheet.write('A283', result_14_caixas)
@@ -4062,8 +4056,7 @@ def botao_executar():
                 result_15_unidades = pytesseract.image_to_string(
                     crop_image_15_unidades, config='--psm 8 digits -c tessedit_char_whitelist=1234567890')
                 if result_15_unidades[0:1] == str(0):
-                    crop_image_15_unidades = crop_image_15[(q + (412 - numero_quadros + 3)):(a + 340),
-                                            (z + 850):(p + 402)]
+                    crop_image_15_unidades = crop_image_15[(q + (412 - numero_quadros + 3)):(a + 340), (z + 850):(p + 402)]
                     crop_image_15_unidades = cv.fastNlMeansDenoisingColored(crop_image_15_unidades, None, 10, 10, 7, 21)
                     kernel_15 = cv.getStructuringElement(cv.MORPH_RECT, (3, 3))
                     crop_image_15_unidades = cv.morphologyEx(crop_image_15_unidades, cv.MORPH_CLOSE, kernel_15)
@@ -4153,8 +4146,7 @@ def botao_executar():
             kernel_15 = cv.getStructuringElement(cv.MORPH_RECT, (3, 3))
             crop_image_15_caixas = cv.morphologyEx(crop_image_15_caixas, cv.MORPH_CLOSE, kernel_15)
             pytesseract.pytesseract.tesseract_cmd = Path(j)
-            result_15_caixas = pytesseract.image_to_string(crop_image_15_caixas,
-                                                            config='--psm 6 -c tessedit_char_whitelist=0123456789,€')
+            result_15_caixas = pytesseract.image_to_string(crop_image_15_caixas, config='--psm 6 -c tessedit_char_whitelist=0123456789,€')
             with open('abc.txt', mode='w') as file:
                 file.write(result_15_caixas)
                 sheet.write('A304', result_15_caixas)
@@ -4308,8 +4300,7 @@ def botao_executar():
                 result_16_unidades = pytesseract.image_to_string(
                     crop_image_16_unidades, config='--psm 8 digits -c tessedit_char_whitelist=1234567890')
                 if result_16_unidades[0:1] == str(0):
-                    crop_image_16_unidades = crop_image_16[(q + (412 - numero_quadros + 3)):(a + 340),
-                                            (z + 850):(p + 402)]
+                    crop_image_16_unidades = crop_image_16[(q + (412 - numero_quadros + 3)):(a + 340), (z + 850):(p + 402)]
                     crop_image_16_unidades = cv.fastNlMeansDenoisingColored(crop_image_16_unidades, None, 10, 10, 7, 21)
                     kernel_16 = cv.getStructuringElement(cv.MORPH_RECT, (3, 3))
                     crop_image_16_unidades = cv.morphologyEx(crop_image_16_unidades, cv.MORPH_CLOSE, kernel_16)
@@ -4399,8 +4390,7 @@ def botao_executar():
             kernel_16 = cv.getStructuringElement(cv.MORPH_RECT, (3, 3))
             crop_image_16_caixas = cv.morphologyEx(crop_image_16_caixas, cv.MORPH_CLOSE, kernel_16)
             pytesseract.pytesseract.tesseract_cmd = Path(j)
-            result_16_caixas = pytesseract.image_to_string(crop_image_16_caixas,
-                                                            config='--psm 6 -c tessedit_char_whitelist=0123456789,€')
+            result_16_caixas = pytesseract.image_to_string(crop_image_16_caixas, config='--psm 6 -c tessedit_char_whitelist=0123456789,€')
             with open('abc.txt', mode='w') as file:
                 file.write(result_16_caixas)
                 sheet.write('A325', result_16_caixas)
@@ -4555,8 +4545,7 @@ def botao_executar():
                 result_17_unidades = pytesseract.image_to_string(
                     crop_image_17_unidades, config='--psm 8 digits -c tessedit_char_whitelist=1234567890')
                 if result_17_unidades[0:1] == str(0):
-                    crop_image_17_unidades = crop_image_17[(q + (412 - numero_quadros + 3)):(a + 340),
-                                            (z + 850):(p + 402)]
+                    crop_image_17_unidades = crop_image_17[(q + (412 - numero_quadros + 3)):(a + 340), (z + 850):(p + 402)]
                     crop_image_17_unidades = cv.fastNlMeansDenoisingColored(crop_image_17_unidades, None, 10, 10, 7, 21)
                     kernel_17 = cv.getStructuringElement(cv.MORPH_RECT, (3, 3))
                     crop_image_17_unidades = cv.morphologyEx(crop_image_17_unidades, cv.MORPH_CLOSE, kernel_17)
@@ -4646,8 +4635,7 @@ def botao_executar():
             kernel_17 = cv.getStructuringElement(cv.MORPH_RECT, (3, 3))
             crop_image_17_caixas = cv.morphologyEx(crop_image_17_caixas, cv.MORPH_CLOSE, kernel_17)
             pytesseract.pytesseract.tesseract_cmd = Path(j)
-            result_17_caixas = pytesseract.image_to_string(crop_image_17_caixas,
-                                                            config='--psm 6 -c tessedit_char_whitelist=0123456789,€')
+            result_17_caixas = pytesseract.image_to_string(crop_image_17_caixas, config='--psm 6 -c tessedit_char_whitelist=0123456789,€')
             with open('abc.txt', mode='w') as file:
                 file.write(result_17_caixas)
                 sheet.write('A346', result_17_caixas)
@@ -4801,8 +4789,7 @@ def botao_executar():
                 result_18_unidades = pytesseract.image_to_string(
                     crop_image_18_unidades, config='--psm 8 digits -c tessedit_char_whitelist=1234567890')
                 if result_18_unidades[0:1] == str(0):
-                    crop_image_18_unidades = crop_image_18[(q + (412 - numero_quadros + 3)):(a + 340),
-                                            (z + 850):(p + 402)]
+                    crop_image_18_unidades = crop_image_18[(q + (412 - numero_quadros + 3)):(a + 340), (z + 850):(p + 402)]
                     crop_image_18_unidades = cv.fastNlMeansDenoisingColored(crop_image_18_unidades, None, 10, 10, 7, 21)
                     kernel_18 = cv.getStructuringElement(cv.MORPH_RECT, (3, 3))
                     crop_image_18_unidades = cv.morphologyEx(crop_image_18_unidades, cv.MORPH_CLOSE, kernel_18)
@@ -4892,8 +4879,7 @@ def botao_executar():
             kernel_18 = cv.getStructuringElement(cv.MORPH_RECT, (3, 3))
             crop_image_18_caixas = cv.morphologyEx(crop_image_18_caixas, cv.MORPH_CLOSE, kernel_18)
             pytesseract.pytesseract.tesseract_cmd = Path(j)
-            result_18_caixas = pytesseract.image_to_string(crop_image_18_caixas,
-                                                            config='--psm 6 -c tessedit_char_whitelist=0123456789,€')
+            result_18_caixas = pytesseract.image_to_string(crop_image_18_caixas, config='--psm 6 -c tessedit_char_whitelist=0123456789,€')
             with open('abc.txt', mode='w') as file:
                 file.write(result_18_caixas)
                 sheet.write('A367', result_18_caixas)
@@ -5046,8 +5032,7 @@ def botao_executar():
                 result_19_unidades = pytesseract.image_to_string(
                     crop_image_19_unidades, config='--psm 8 digits -c tessedit_char_whitelist=1234567890')
                 if result_19_unidades[0:1] == str(0):
-                    crop_image_19_unidades = crop_image_19[(q + (412 - numero_quadros + 3)):(a + 340),
-                                            (z + 850):(p + 402)]
+                    crop_image_19_unidades = crop_image_19[(q + (412 - numero_quadros + 3)):(a + 340), (z + 850):(p + 402)]
                     crop_image_19_unidades = cv.fastNlMeansDenoisingColored(crop_image_19_unidades, None, 10, 10, 7, 21)
                     kernel_19 = cv.getStructuringElement(cv.MORPH_RECT, (3, 3))
                     crop_image_19_unidades = cv.morphologyEx(crop_image_19_unidades, cv.MORPH_CLOSE, kernel_19)
@@ -5137,8 +5122,7 @@ def botao_executar():
             kernel_19 = cv.getStructuringElement(cv.MORPH_RECT, (3, 3))
             crop_image_19_caixas = cv.morphologyEx(crop_image_19_caixas, cv.MORPH_CLOSE, kernel_19)
             pytesseract.pytesseract.tesseract_cmd = Path(j)
-            result_19_caixas = pytesseract.image_to_string(crop_image_19_caixas,
-                                                            config='--psm 6 -c tessedit_char_whitelist=0123456789,€')
+            result_19_caixas = pytesseract.image_to_string(crop_image_19_caixas, config='--psm 6 -c tessedit_char_whitelist=0123456789,€')
             with open('abc.txt', mode='w') as file:
                 file.write(result_19_caixas)
                 sheet.write('A388', result_19_caixas)
@@ -5292,8 +5276,7 @@ def botao_executar():
                 result_20_unidades = pytesseract.image_to_string(
                     crop_image_20_unidades, config='--psm 8 digits -c tessedit_char_whitelist=1234567890')
                 if result_20_unidades[0:1] == str(0):
-                    crop_image_20_unidades = crop_image_20[(q + (412 - numero_quadros + 3)):(a + 340),
-                                            (z + 850):(p + 402)]
+                    crop_image_20_unidades = crop_image_20[(q + (412 - numero_quadros + 3)):(a + 340), (z + 850):(p + 402)]
                     crop_image_20_unidades = cv.fastNlMeansDenoisingColored(crop_image_20_unidades, None, 10, 10, 7, 21)
                     kernel_20 = cv.getStructuringElement(cv.MORPH_RECT, (3, 3))
                     crop_image_20_unidades = cv.morphologyEx(crop_image_20_unidades, cv.MORPH_CLOSE, kernel_20)
@@ -5383,8 +5366,7 @@ def botao_executar():
             kernel_20 = cv.getStructuringElement(cv.MORPH_RECT, (3, 3))
             crop_image_20_caixas = cv.morphologyEx(crop_image_20_caixas, cv.MORPH_CLOSE, kernel_20)
             pytesseract.pytesseract.tesseract_cmd = Path(j)
-            result_20_caixas = pytesseract.image_to_string(crop_image_20_caixas,
-                                                            config='--psm 6 -c tessedit_char_whitelist=0123456789,€')
+            result_20_caixas = pytesseract.image_to_string(crop_image_20_caixas, config='--psm 6 -c tessedit_char_whitelist=0123456789,€')
             with open('abc.txt', mode='w') as file:
                 file.write(result_20_caixas)
                 sheet.write('A409', result_20_caixas)
@@ -5538,8 +5520,7 @@ def botao_executar():
                 result_21_unidades = pytesseract.image_to_string(
                     crop_image_21_unidades, config='--psm 8 digits -c tessedit_char_whitelist=1234567890')
                 if result_21_unidades[0:1] == str(0):
-                    crop_image_21_unidades = crop_image_21[(q + (412 - numero_quadros + 3)):(a + 340),
-                                            (z + 850):(p + 402)]
+                    crop_image_21_unidades = crop_image_21[(q + (412 - numero_quadros + 3)):(a + 340), (z + 850):(p + 402)]
                     crop_image_21_unidades = cv.fastNlMeansDenoisingColored(crop_image_21_unidades, None, 10, 10, 7, 21)
                     kernel_21 = cv.getStructuringElement(cv.MORPH_RECT, (3, 3))
                     crop_image_21_unidades = cv.morphologyEx(crop_image_21_unidades, cv.MORPH_CLOSE, kernel_21)
@@ -5627,8 +5608,7 @@ def botao_executar():
             kernel_21 = cv.getStructuringElement(cv.MORPH_RECT, (3, 3))
             crop_image_21_caixas = cv.morphologyEx(crop_image_21_caixas, cv.MORPH_CLOSE, kernel_21)
             pytesseract.pytesseract.tesseract_cmd = Path(j)
-            result_21_caixas = pytesseract.image_to_string(crop_image_21_caixas,
-                                                            config='--psm 6 -c tessedit_char_whitelist=0123456789,€')
+            result_21_caixas = pytesseract.image_to_string(crop_image_21_caixas, config='--psm 6 -c tessedit_char_whitelist=0123456789,€')
             with open('abc.txt', mode='w') as file:
                 file.write(result_21_caixas)
                 sheet.write('A430', result_21_caixas)
@@ -6496,156 +6476,120 @@ def botao_executar():
                 celula_add_1_dim = "A" + str(((21 * (numero_quadros)) + 1))
                 sheet.write(celula_add_1_dim, altura_1_v + " " + largura_1_v + " " + espessura_1_v)
 
-                unidades_1 = result_1_unidades
                 celula_add_1_uni = "A" + str(((21 * (numero_quadros)) + 2))
-                sheet.write(celula_add_1_uni, str(unidades_1))
+                sheet.write(celula_add_1_uni, str(result_1_unidades))
 
-                cliche_1 = result_1_cliche
                 celula_add_1_cliche = "A" + str(((21 * (numero_quadros)) + 3))
-                sheet.write(celula_add_1_cliche, str(cliche_1))
+                sheet.write(celula_add_1_cliche, str(result_1_cliche))
 
-                tinta_1 = result_1_tinta
                 celula_add_1_tinta = "A" + str(((21 * (numero_quadros)) + 4))
-                sheet.write(celula_add_1_tinta, str(tinta_1))
+                sheet.write(celula_add_1_tinta, str(result_1_tinta))
 
-                n_cores_1 = result_1_n_cores
                 celula_add_1_n_cores = "A" + str(((21 * (numero_quadros)) + 5))
-                sheet.write(celula_add_1_n_cores, str(n_cores_1))
+                sheet.write(celula_add_1_n_cores, str(result_1_n_cores))
 
-                n_caixas_1 = result_1_n_caixas
                 celula_add_1_n_caixas = "A" + str(((21 * (numero_quadros)) + 6))
-                sheet.write(celula_add_1_n_caixas, str(n_caixas_1))
+                sheet.write(celula_add_1_n_caixas, str(result_1_n_caixas))
 
-                tipo_cliente_1 = result_1_tipo_clientes
                 celula_add_1_tipo_cliente = "A" + str(((21 * (numero_quadros)) + 7))
-                sheet.write(celula_add_1_tipo_cliente, str(tipo_cliente_1))
+                sheet.write(celula_add_1_tipo_cliente, str(result_1_tipo_clientes))
 
-                servico_1_1 = result_1_servicos_1
                 celula_add_1_servico_1 = "A" + str(((21 * (numero_quadros)) + 8))
-                sheet.write(celula_add_1_servico_1, str(servico_1_1))
+                sheet.write(celula_add_1_servico_1, str(result_1_servicos_1))
 
-                servico_2_1 = result_1_servicos_2
                 celula_add_1_servico_2 = "A" + str(((21 * (numero_quadros)) + 9))
-                sheet.write(celula_add_1_servico_2, str(servico_2_1))
+                sheet.write(celula_add_1_servico_2, str(result_1_servicos_2))
 
-                caixas_1 = result_1_caixas
                 celula_add_1_caixas = "A" + str(((21 * (numero_quadros)) + 10))
-                sheet.write(celula_add_1_caixas, str(caixas_1))
+                sheet.write(celula_add_1_caixas, str(result_1_caixas))
 
-                total_1 = result_1_total
                 celula_add_1_total = "A" + str(((21 * (numero_quadros)) + 11))
-                sheet.write(celula_add_1_total, str(total_1))
+                sheet.write(celula_add_1_total, str(result_1_total))
 
-                s_espessura_1 = result_1_espessura
                 celula_add_1_espessura = "A" + str(((21 * (numero_quadros)) + 12))
-                sheet.write(celula_add_1_espessura, str(s_espessura_1))
+                sheet.write(celula_add_1_espessura, str(result_1_espessura))
 
-                cor_1_1 = result_1_1_cor
                 celula_add_1_1_cor = "B" + str(((21 * (numero_quadros)) + 13))
-                sheet.write(celula_add_1_1_cor, str(cor_1_1))
+                sheet.write(celula_add_1_1_cor, str(result_1_1_cor))
 
-                cor_2_1 = result_1_2_cor
                 celula_add_1_2_cor = "C" + str(((21 * (numero_quadros)) + 13))
-                sheet.write(celula_add_1_2_cor, str(cor_2_1))
+                sheet.write(celula_add_1_2_cor, str(result_1_2_cor))
 
-                cor_3_1 = result_1_3_cor
                 celula_add_1_3_cor = "D" + str(((21 * (numero_quadros)) + 13))
-                sheet.write(celula_add_1_3_cor, str(cor_3_1))
+                sheet.write(celula_add_1_3_cor, str(result_1_3_cor))
 
-                cor_4_1 = result_1_4_cor
                 celula_add_1_4_cor = "E" + str(((21 * (numero_quadros)) + 13))
-                sheet.write(celula_add_1_4_cor, str(cor_4_1))
+                sheet.write(celula_add_1_4_cor, str(result_1_4_cor))
 
-                cor_5_1 = result_1_5_cor
                 celula_add_1_5_cor = "F" + str(((21 * (numero_quadros)) + 13))
-                sheet.write(celula_add_1_5_cor, str(cor_5_1))
+                sheet.write(celula_add_1_5_cor, str(result_1_5_cor))
 
-                cor_6_1 = result_1_6_cor
                 celula_add_1_6_cor = "G" + str(((21 * (numero_quadros)) + 13))
-                sheet.write(celula_add_1_6_cor, str(cor_6_1))
+                sheet.write(celula_add_1_6_cor, str(result_1_6_cor))
 
-                fabricada_cor_1 = result_1_fabricada_cor
                 celula_add_1_fabricada_cor = "H" + str(((21 * (numero_quadros)) + 13))
-                sheet.write(celula_add_1_fabricada_cor, str(fabricada_cor_1))
+                sheet.write(celula_add_1_fabricada_cor, str(result_1_fabricada_cor))
 
             if int(quantidade_quadros_v) >= 2:
                 altura_1_v = altura_1.get()
                 largura_1_v = largura_1.get()
                 espessura_1_v = espessura_1.get()
-                celula_add_1_dim = "A" + str(((21 * (numero_quadros + 1 )) + 1))
+                celula_add_1_dim = "A" + str(((21 * (numero_quadros + 1)) + 1))
                 sheet.write(celula_add_1_dim, altura_1_v + " " + largura_1_v + " " + espessura_1_v)
 
-                unidades_2 = result_2_unidades
                 celula_add_2_uni = "A" + str(((21 * (numero_quadros + 1)) + 2))
-                sheet.write(celula_add_2_uni, str(unidades_2))
+                sheet.write(celula_add_2_uni, str(result_2_unidades))
 
-                cliche_2 = result_2_cliche
                 celula_add_2_cliche = "A" + str(((21 * (numero_quadros + 1)) + 3))
-                sheet.write(celula_add_2_cliche, str(cliche_2))
+                sheet.write(celula_add_2_cliche, str(result_2_cliche))
 
-                tinta_2 = result_2_tinta
                 celula_add_2_tinta = "A" + str(((21 * (numero_quadros + 1)) + 4))
-                sheet.write(celula_add_2_tinta, str(tinta_2))
+                sheet.write(celula_add_2_tinta, str(result_2_tinta))
 
-                n_cores_2 = result_2_n_cores
                 celula_add_2_n_cores = "A" + str(((21 * (numero_quadros + 1)) + 5))
-                sheet.write(celula_add_2_n_cores, str(n_cores_2))
+                sheet.write(celula_add_2_n_cores, str(result_2_n_cores))
 
-                n_caixas_2 = result_2_n_caixas
                 celula_add_2_n_caixas = "A" + str(((21 * (numero_quadros + 1)) + 6))
-                sheet.write(celula_add_2_n_caixas, str(n_caixas_2))
+                sheet.write(celula_add_2_n_caixas, str(result_2_n_caixas))
 
-                tipo_cliente_2 = result_2_tipo_clientes
                 celula_add_2_tipo_cliente = "A" + str(((21 * (numero_quadros + 1)) + 7))
-                sheet.write(celula_add_2_tipo_cliente, str(tipo_cliente_2))
+                sheet.write(celula_add_2_tipo_cliente, str(result_2_tipo_clientes))
 
-                servico_1_2 = result_2_servicos_1
                 celula_add_2_servico_1 = "A" + str(((21 * (numero_quadros + 1)) + 8))
-                sheet.write(celula_add_2_servico_1, str(servico_1_2))
+                sheet.write(celula_add_2_servico_1, str(result_2_servicos_1))
 
-                servico_2_2 = result_2_servicos_2
                 celula_add_2_servico_2 = "A" + str(((21 * (numero_quadros + 1)) + 9))
-                sheet.write(celula_add_2_servico_2, str(servico_2_2))
+                sheet.write(celula_add_2_servico_2, str(result_2_servicos_2))
 
-                caixas_2 = result_2_caixas
                 celula_add_2_caixas = "A" + str(((21 * (numero_quadros + 1)) + 10))
-                sheet.write(celula_add_2_caixas, str(caixas_2))
+                sheet.write(celula_add_2_caixas, str(result_2_caixas))
 
-                total_2 = result_2_total
                 celula_add_2_total = "A" + str(((21 * (numero_quadros + 1)) + 11))
-                sheet.write(celula_add_2_total, str(total_2))
+                sheet.write(celula_add_2_total, str(result_2_total))
 
-                s_espessura_2 = result_2_espessura
                 celula_add_2_espessura = "A" + str(((21 * (numero_quadros + 1)) + 12))
-                sheet.write(celula_add_2_espessura, str(s_espessura_2))
+                sheet.write(celula_add_2_espessura, str(result_2_espessura))
 
-                cor_1_2 = result_2_1_cor
                 celula_add_2_1_cor = "B" + str(((21 * (numero_quadros + 1)) + 13))
-                sheet.write(celula_add_2_1_cor, str(cor_1_2))
+                sheet.write(celula_add_2_1_cor, str(result_2_1_cor))
 
-                cor_2_2 = result_2_2_cor
                 celula_add_2_2_cor = "C" + str(((21 * (numero_quadros + 1)) + 13))
-                sheet.write(celula_add_2_2_cor, str(cor_2_2))
+                sheet.write(celula_add_2_2_cor, str(result_2_2_cor))
 
-                cor_3_2 = result_2_3_cor
                 celula_add_2_3_cor = "D" + str(((21 * (numero_quadros + 1)) + 13))
-                sheet.write(celula_add_2_3_cor, str(cor_3_2))
+                sheet.write(celula_add_2_3_cor, str(result_2_3_cor))
 
-                cor_4_2 = result_2_4_cor
                 celula_add_2_4_cor = "E" + str(((21 * (numero_quadros + 1)) + 13))
-                sheet.write(celula_add_2_4_cor, str(cor_4_2))
+                sheet.write(celula_add_2_4_cor, str(result_2_4_cor))
 
-                cor_5_2 = result_2_5_cor
                 celula_add_2_5_cor = "F" + str(((21 * (numero_quadros + 1)) + 13))
-                sheet.write(celula_add_2_5_cor, str(cor_5_2))
+                sheet.write(celula_add_2_5_cor, str(result_2_5_cor))
 
-                cor_6_2 = result_2_6_cor
                 celula_add_2_6_cor = "G" + str(((21 * (numero_quadros + 1)) + 13))
-                sheet.write(celula_add_2_6_cor, str(cor_6_2))
+                sheet.write(celula_add_2_6_cor, str(result_2_6_cor))
 
-                fabricada_cor_2 = result_2_fabricada_cor
                 celula_add_2_fabricada_cor = "H" + str(((21 * (numero_quadros + 1)) + 13))
-                sheet.write(celula_add_2_fabricada_cor, str(fabricada_cor_2))
+                sheet.write(celula_add_2_fabricada_cor, str(result_2_fabricada_cor))
 
             if int(quantidade_quadros_v) >= 3:
                 altura_1_v = altura_1.get()
@@ -6657,73 +6601,56 @@ def botao_executar():
                 celula_add_3_uni = "A" + str(((21 * (numero_quadros + 2)) + 2))
                 sheet.write(celula_add_3_uni, str(unidades_3))
 
-                cliche_3 = result_3_cliche
                 celula_add_3_cliche = "A" + str(((21 * (numero_quadros + 2)) + 3))
-                sheet.write(celula_add_3_cliche, str(cliche_3))
+                sheet.write(celula_add_3_cliche, str(result_3_cliche))
 
-                tinta_3 = result_3_tinta
                 celula_add_3_tinta = "A" + str(((21 * (numero_quadros + 2)) + 4))
-                sheet.write(celula_add_3_tinta, str(tinta_3))
+                sheet.write(celula_add_3_tinta, str(result_3_tinta))
 
-                n_cores_3 = result_3_n_cores
                 celula_add_3_n_cores = "A" + str(((21 * (numero_quadros + 2)) + 5))
-                sheet.write(celula_add_3_n_cores, str(n_cores_3))
+                sheet.write(celula_add_3_n_cores, str(result_3_n_cores))
 
-                n_caixas_3 = result_3_n_caixas
                 celula_add_3_n_caixas = "A" + str(((21 * (numero_quadros + 2)) + 6))
-                sheet.write(celula_add_3_n_caixas, str(n_caixas_3))
+                sheet.write(celula_add_3_n_caixas, str(result_3_n_caixas))
 
-                tipo_cliente_3 = result_3_tipo_clientes
                 celula_add_3_tipo_cliente = "A" + str(((21 * (numero_quadros + 2)) + 7))
-                sheet.write(celula_add_3_tipo_cliente, str(tipo_cliente_3))
+                sheet.write(celula_add_3_tipo_cliente, str(result_3_tipo_clientes))
 
-                servico_1_3 = result_3_servicos_1
                 celula_add_3_servico_1 = "A" + str(((21 * (numero_quadros + 2)) + 8))
-                sheet.write(celula_add_3_servico_1, str(servico_1_3))
+                sheet.write(celula_add_3_servico_1, str(result_3_servicos_1))
 
-                servico_2_3 = result_3_servicos_2
                 celula_add_3_servico_2 = "A" + str(((21 * (numero_quadros + 2)) + 9))
-                sheet.write(celula_add_3_servico_2, str(servico_2_3))
+                sheet.write(celula_add_3_servico_2, str(result_3_servicos_2))
 
-                caixas_3 = result_3_caixas
                 celula_add_3_caixas = "A" + str(((21 * (numero_quadros + 2)) + 10))
-                sheet.write(celula_add_3_caixas, str(caixas_3))
+                sheet.write(celula_add_3_caixas, str(result_3_caixas))
 
-                total_3 = result_3_total
                 celula_add_3_total = "A" + str(((21 * (numero_quadros + 2)) + 11))
-                sheet.write(celula_add_3_total, str(total_3))
+                sheet.write(celula_add_3_total, str(result_3_total))
 
-                s_espessura_3 = result_3_espessura
                 celula_add_3_espessura = "A" + str(((21 * (numero_quadros + 2)) + 12))
-                sheet.write(celula_add_3_espessura, str(s_espessura_3))
+                sheet.write(celula_add_3_espessura, str(result_3_espessura))
 
-                cor_1_3 = result_3_1_cor
                 celula_add_3_1_cor = "B" + str(((21 * (numero_quadros + 2)) + 13))
-                sheet.write(celula_add_3_1_cor, str(cor_1_3))
+                sheet.write(celula_add_3_1_cor, str(result_3_1_cor))
 
-                cor_2_3 = result_3_2_cor
                 celula_add_3_2_cor = "C" + str(((21 * (numero_quadros + 2)) + 13))
-                sheet.write(celula_add_3_2_cor, str(cor_2_3))
+                sheet.write(celula_add_3_2_cor, str(result_3_2_cor))
 
-                cor_3_3 = result_3_3_cor
                 celula_add_3_3_cor = "D" + str(((21 * (numero_quadros + 2)) + 13))
-                sheet.write(celula_add_3_3_cor, str(cor_3_3))
+                sheet.write(celula_add_3_3_cor, str(result_3_3_cor))
 
-                cor_4_3 = result_3_4_cor
                 celula_add_3_4_cor = "E" + str(((21 * (numero_quadros + 2)) + 13))
-                sheet.write(celula_add_3_4_cor, str(cor_4_3))
+                sheet.write(celula_add_3_4_cor, str(result_3_4_cor))
 
-                cor_5_3 = result_3_5_cor
                 celula_add_3_5_cor = "F" + str(((21 * (numero_quadros + 2)) + 13))
-                sheet.write(celula_add_3_5_cor, str(cor_5_3))
+                sheet.write(celula_add_3_5_cor, str(result_3_5_cor))
 
-                cor_6_3 = result_3_6_cor
                 celula_add_3_6_cor = "G" + str(((21 * (numero_quadros + 2)) + 13))
-                sheet.write(celula_add_3_6_cor, str(cor_6_3))
+                sheet.write(celula_add_3_6_cor, str(result_3_6_cor))
 
-                fabricada_cor_3 = result_3_fabricada_cor
                 celula_add_3_fabricada_cor = "H" + str(((21 * (numero_quadros + 2)) + 13))
-                sheet.write(celula_add_3_fabricada_cor, str(fabricada_cor_3))
+                sheet.write(celula_add_3_fabricada_cor, str(result_3_fabricada_cor))
 
             if int(quantidade_quadros_v) >= 4:
                 altura_1_v = altura_1.get()
@@ -6731,77 +6658,61 @@ def botao_executar():
                 espessura_1_v = espessura_1.get()
                 celula_add_1_dim = "A" + str(((21 * (numero_quadros + 3)) + 1))
                 sheet.write(celula_add_1_dim, altura_1_v + " " + largura_1_v + " " + espessura_1_v)
-                unidades_4 = result_4_unidades
+
                 celula_add_4_uni = "A" + str(((21 * (numero_quadros + 3)) + 2))
-                sheet.write(celula_add_4_uni, str(unidades_4))
+                sheet.write(celula_add_4_uni, str(result_4_unidades))
 
-                cliche_4 = result_4_cliche
                 celula_add_4_cliche = "A" + str(((21 * (numero_quadros + 3)) + 3))
-                sheet.write(celula_add_4_cliche, str(cliche_4))
+                sheet.write(celula_add_4_cliche, str(result_4_cliche))
 
-                tinta_4 = result_4_tinta
                 celula_add_4_tinta = "A" + str(((21 * (numero_quadros + 3)) + 4))
-                sheet.write(celula_add_4_tinta, str(tinta_4))
+                sheet.write(celula_add_4_tinta, str(result_4_tinta))
 
-                n_cores_4 = result_4_n_cores
                 celula_add_4_n_cores = "A" + str(((21 * (numero_quadros + 3)) + 5))
-                sheet.write(celula_add_4_n_cores, str(n_cores_4))
+                sheet.write(celula_add_4_n_cores, str(result_4_n_cores))
 
-                n_caixas_4 = result_4_n_caixas
                 celula_add_4_n_caixas = "A" + str(((21 * (numero_quadros + 3)) + 6))
-                sheet.write(celula_add_4_n_caixas, str(n_caixas_4))
+                sheet.write(celula_add_4_n_caixas, str(result_4_n_caixas))
 
-                tipo_cliente_4 = result_4_tipo_clientes
                 celula_add_4_tipo_cliente = "A" + str(((21 * (numero_quadros + 3)) + 7))
-                sheet.write(celula_add_4_tipo_cliente, str(tipo_cliente_4))
+                sheet.write(celula_add_4_tipo_cliente, str(result_4_tipo_clientes))
 
-                servico_1_4 = result_4_servicos_1
                 celula_add_4_servico_1 = "A" + str(((21 * (numero_quadros + 3)) + 8))
-                sheet.write(celula_add_4_servico_1, str(servico_1_4))
+                sheet.write(celula_add_4_servico_1, str(result_4_servicos_1))
 
-                servico_2_4 = result_4_servicos_2
                 celula_add_4_servico_2 = "A" + str(((21 * (numero_quadros + 3)) + 9))
-                sheet.write(celula_add_4_servico_2, str(servico_2_4))
+                sheet.write(celula_add_4_servico_2, str(result_4_servicos_2))
 
-                caixas_4 = result_4_caixas
                 celula_add_4_caixas = "A" + str(((21 * (numero_quadros + 3)) + 10))
-                sheet.write(celula_add_4_caixas, str(caixas_4))
+                sheet.write(celula_add_4_caixas, str(result_4_caixas))
 
-                total_4 = result_4_total
                 celula_add_4_total = "A" + str(((21 * (numero_quadros + 3)) + 11))
-                sheet.write(celula_add_4_total, str(total_4))
+                sheet.write(celula_add_4_total, str(result_4_total))
 
-                s_espessura_4 = result_4_espessura
+
                 celula_add_4_espessura = "A" + str(((21 * (numero_quadros + 3)) + 12))
-                sheet.write(celula_add_4_espessura, str(s_espessura_4))
+                sheet.write(celula_add_4_espessura, str(result_4_espessura))
 
-                cor_1_4 = result_4_1_cor
                 celula_add_4_1_cor = "B" + str(((21 * (numero_quadros + 3)) + 13))
-                sheet.write(celula_add_4_1_cor, str(cor_1_4))
+                sheet.write(celula_add_4_1_cor, str(result_4_1_cor))
 
-                cor_2_4 = result_4_2_cor
                 celula_add_4_2_cor = "C" + str(((21 * (numero_quadros + 3)) + 13))
-                sheet.write(celula_add_4_2_cor, str(cor_2_4))
+                sheet.write(celula_add_4_2_cor, str(result_4_2_cor))
 
-                cor_3_4 = result_4_3_cor
                 celula_add_4_3_cor = "D" + str(((21 * (numero_quadros + 3)) + 13))
-                sheet.write(celula_add_4_3_cor, str(cor_3_4))
+                sheet.write(celula_add_4_3_cor, str(result_4_3_cor))
 
-                cor_4_4 = result_4_4_cor
                 celula_add_4_4_cor = "E" + str(((21 * (numero_quadros + 3)) + 13))
-                sheet.write(celula_add_4_4_cor, str(cor_4_4))
+                sheet.write(celula_add_4_4_cor, str(result_4_4_cor))
 
-                cor_5_4 = result_4_5_cor
                 celula_add_4_5_cor = "F" + str(((21 * (numero_quadros + 3)) + 13))
-                sheet.write(celula_add_4_5_cor, str(cor_5_4))
+                sheet.write(celula_add_4_5_cor, str(result_4_5_cor))
 
-                cor_6_4 = result_4_6_cor
                 celula_add_4_6_cor = "G" + str(((21 * (numero_quadros + 3)) + 13))
-                sheet.write(celula_add_4_6_cor, str(cor_6_4))
+                sheet.write(celula_add_4_6_cor, str(result_4_6_cor))
 
-                fabricada_cor_4 = result_4_fabricada_cor
                 celula_add_4_fabricada_cor = "H" + str(((21 * (numero_quadros + 3)) + 13))
-                sheet.write(celula_add_4_fabricada_cor, str(fabricada_cor_4))
+                sheet.write(celula_add_4_fabricada_cor, str(result_4_fabricada_cor))
 
             if int(quantidade_quadros_v) >= 5:
                 altura_1_v = altura_1.get()
@@ -6810,77 +6721,59 @@ def botao_executar():
                 celula_add_1_dim = "A" + str(((21 * (numero_quadros + 4)) + 1))
                 sheet.write(celula_add_1_dim, altura_1_v + " " + largura_1_v + " " + espessura_1_v)
 
-                unidades_5 = result_5_unidades
                 celula_add_5_uni = "A" + str(((21 * (numero_quadros + 4)) + 2))
-                sheet.write(celula_add_5_uni, str(unidades_5))
+                sheet.write(celula_add_5_uni, str(result_5_unidades))
 
-                cliche_5 = result_5_cliche
                 celula_add_5_cliche = "A" + str(((21 * (numero_quadros + 4)) + 3))
-                sheet.write(celula_add_5_cliche, str(cliche_5))
+                sheet.write(celula_add_5_cliche, str(result_5_cliche))
 
-                tinta_5 = result_5_tinta
                 celula_add_5_tinta = "A" + str(((21 * (numero_quadros + 4)) + 4))
-                sheet.write(celula_add_5_tinta, str(tinta_5))
+                sheet.write(celula_add_5_tinta, str(result_5_tinta))
 
-                n_cores_5 = result_5_n_cores
                 celula_add_5_n_cores = "A" + str(((21 * (numero_quadros + 4)) + 5))
-                sheet.write(celula_add_5_n_cores, str(n_cores_5))
+                sheet.write(celula_add_5_n_cores, str(result_5_n_cores))
 
-                n_caixas_5 = result_5_n_caixas
                 celula_add_5_n_caixas = "A" + str(((21 * (numero_quadros + 4)) + 6))
-                sheet.write(celula_add_5_n_caixas, str(n_caixas_5))
+                sheet.write(celula_add_5_n_caixas, str(result_5_n_caixas))
 
-                tipo_cliente_5 = result_5_tipo_clientes
                 celula_add_5_tipo_cliente = "A" + str(((21 * (numero_quadros + 4)) + 7))
-                sheet.write(celula_add_5_tipo_cliente, str(tipo_cliente_5))
+                sheet.write(celula_add_5_tipo_cliente, str(result_5_tipo_clientes))
 
-                servico_1_5 = result_5_servicos_1
                 celula_add_5_servico_1 = "A" + str(((21 * (numero_quadros + 4)) + 8))
-                sheet.write(celula_add_5_servico_1, str(servico_1_5))
+                sheet.write(celula_add_5_servico_1, str(result_5_servicos_1))
 
-                servico_2_5 = result_5_servicos_2
                 celula_add_5_servico_2 = "A" + str(((21 * (numero_quadros + 4)) + 9))
-                sheet.write(celula_add_5_servico_2, str(servico_2_5))
+                sheet.write(celula_add_5_servico_2, str(result_5_servicos_2))
 
-                caixas_5 = result_5_caixas
                 celula_add_5_caixas = "A" + str(((21 * (numero_quadros + 4)) + 10))
-                sheet.write(celula_add_5_caixas, str(caixas_5))
+                sheet.write(celula_add_5_caixas, str(result_5_caixas))
 
-                total_5 = result_5_total
                 celula_add_5_total = "A" + str(((21 * (numero_quadros + 4)) + 11))
-                sheet.write(celula_add_5_total, str(total_5))
+                sheet.write(celula_add_5_total, str(result_5_total))
 
-                s_espessura_5 = result_5_espessura
                 celula_add_5_espessura = "A" + str(((21 * (numero_quadros + 4)) + 12))
-                sheet.write(celula_add_5_espessura, str(s_espessura_5))
+                sheet.write(celula_add_5_espessura, str(result_5_espessura))
 
-                cor_1_5 = result_5_1_cor
                 celula_add_5_1_cor = "B" + str(((21 * (numero_quadros + 4)) + 13))
-                sheet.write(celula_add_5_1_cor, str(cor_1_5))
+                sheet.write(celula_add_5_1_cor, str(result_5_1_cor))
 
-                cor_2_5 = result_5_2_cor
                 celula_add_5_2_cor = "C" + str(((21 * (numero_quadros + 4)) + 13))
-                sheet.write(celula_add_5_2_cor, str(cor_2_5))
+                sheet.write(celula_add_5_2_cor, str(result_5_2_cor))
 
-                cor_3_5 = result_5_3_cor
                 celula_add_5_3_cor = "D" + str(((21 * (numero_quadros + 4)) + 13))
-                sheet.write(celula_add_5_3_cor, str(cor_3_5))
+                sheet.write(celula_add_5_3_cor, str(result_5_3_cor))
 
-                cor_4_5 = result_5_4_cor
                 celula_add_5_4_cor = "E" + str(((21 * (numero_quadros + 4)) + 13))
-                sheet.write(celula_add_5_4_cor, str(cor_4_5))
+                sheet.write(celula_add_5_4_cor, str(result_5_4_cor))
 
-                cor_5_5 = result_5_5_cor
                 celula_add_5_5_cor = "F" + str(((21 * (numero_quadros + 4)) + 13))
-                sheet.write(celula_add_5_5_cor, str(cor_5_5))
+                sheet.write(celula_add_5_5_cor, str(result_5_5_cor))
 
-                cor_6_5 = result_5_6_cor
                 celula_add_5_6_cor = "G" + str(((21 * (numero_quadros + 4)) + 13))
-                sheet.write(celula_add_5_6_cor, str(cor_6_5))
+                sheet.write(celula_add_5_6_cor, str(result_5_6_cor))
 
-                fabricada_cor_5 = result_5_fabricada_cor
                 celula_add_5_fabricada_cor = "H" + str(((21 * (numero_quadros + 4)) + 13))
-                sheet.write(celula_add_5_fabricada_cor, str(fabricada_cor_5))
+                sheet.write(celula_add_5_fabricada_cor, str(result_5_fabricada_cor))
 
             if int(quantidade_quadros_v) >= 6:
                 altura_1_v = altura_1.get()
@@ -6888,551 +6781,429 @@ def botao_executar():
                 espessura_1_v = espessura_1.get()
                 celula_add_1_dim = "A" + str(((21 * (numero_quadros + 5)) + 1))
                 sheet.write(celula_add_1_dim, altura_1_v + " " + largura_1_v + " " + espessura_1_v)
-                unidades_6 = result_6_unidades
+
                 celula_add_6_uni = "A" + str(((21 * (numero_quadros + 5)) + 2))
-                sheet.write(celula_add_6_uni, str(unidades_6))
+                sheet.write(celula_add_6_uni, str(result_6_unidades))
 
-                cliche_6 = result_6_cliche
                 celula_add_6_cliche = "A" + str(((21 * (numero_quadros + 5)) + 3))
-                sheet.write(celula_add_6_cliche, str(cliche_6))
+                sheet.write(celula_add_6_cliche, str(result_6_cliche))
 
-                tinta_6 = result_6_tinta
                 celula_add_6_tinta = "A" + str(((21 * (numero_quadros + 5)) + 4))
-                sheet.write(celula_add_6_tinta, str(tinta_6))
+                sheet.write(celula_add_6_tinta, str(result_6_tinta))
 
-                n_cores_6 = result_6_n_cores
                 celula_add_6_n_cores = "A" + str(((21 * (numero_quadros + 5)) + 5))
-                sheet.write(celula_add_6_n_cores, str(n_cores_6))
+                sheet.write(celula_add_6_n_cores, str(result_6_n_cores))
 
-                n_caixas_6 = result_6_n_caixas
                 celula_add_6_n_caixas = "A" + str(((21 * (numero_quadros + 5)) + 6))
-                sheet.write(celula_add_6_n_caixas, str(n_caixas_6))
+                sheet.write(celula_add_6_n_caixas, str(result_6_n_caixas))
 
-                tipo_cliente_6 = result_6_tipo_clientes
                 celula_add_6_tipo_cliente = "A" + str(((21 * (numero_quadros + 5)) + 7))
-                sheet.write(celula_add_6_tipo_cliente, str(tipo_cliente_6))
+                sheet.write(celula_add_6_tipo_cliente, str(result_6_tipo_clientes))
 
-                servico_1_6 = result_6_servicos_1
                 celula_add_6_servico_1 = "A" + str(((21 * (numero_quadros + 5)) + 8))
-                sheet.write(celula_add_6_servico_1, str(servico_1_6))
+                sheet.write(celula_add_6_servico_1, str(result_6_servicos_1))
 
-                servico_2_6 = result_6_servicos_2
                 celula_add_6_servico_2 = "A" + str(((21 * (numero_quadros + 5)) + 9))
-                sheet.write(celula_add_6_servico_2, str(servico_2_6))
+                sheet.write(celula_add_6_servico_2, str(result_6_servicos_2))
 
-                caixas_6 = result_6_caixas
                 celula_add_6_caixas = "A" + str(((21 * (numero_quadros + 5)) + 10))
-                sheet.write(celula_add_6_caixas, str(caixas_6))
+                sheet.write(celula_add_6_caixas, str(result_6_caixas))
 
-                total_6 = result_6_total
                 celula_add_6_total = "A" + str(((21 * (numero_quadros + 5)) + 11))
-                sheet.write(celula_add_6_total, str(total_6))
+                sheet.write(celula_add_6_total, str(result_6_total))
 
-                s_espessura_6 = result_6_espessura
                 celula_add_6_espessura = "A" + str(((21 * (numero_quadros + 5)) + 12))
-                sheet.write(celula_add_6_espessura, str(s_espessura_6))
+                sheet.write(celula_add_6_espessura, str(result_6_espessura))
 
-                cor_1_6 = result_6_1_cor
                 celula_add_6_1_cor = "B" + str(((21 * (numero_quadros + 5)) + 13))
-                sheet.write(celula_add_6_1_cor, str(cor_1_6))
+                sheet.write(celula_add_6_1_cor, str(result_6_1_cor))
 
-                cor_2_6 = result_6_2_cor
                 celula_add_6_2_cor = "C" + str(((21 * (numero_quadros + 5)) + 13))
-                sheet.write(celula_add_6_2_cor, str(cor_2_6))
+                sheet.write(celula_add_6_2_cor, str(result_6_2_cor))
 
-                cor_3_6 = result_6_3_cor
                 celula_add_6_3_cor = "D" + str(((21 * (numero_quadros + 5)) + 13))
-                sheet.write(celula_add_6_3_cor, str(cor_3_6))
+                sheet.write(celula_add_6_3_cor, str(result_6_3_cor))
 
-                cor_4_6 = result_6_4_cor
                 celula_add_6_4_cor = "E" + str(((21 * (numero_quadros + 5)) + 13))
-                sheet.write(celula_add_6_4_cor, str(cor_4_6))
+                sheet.write(celula_add_6_4_cor, str(result_6_4_cor))
 
-                cor_5_6 = result_6_5_cor
                 celula_add_6_5_cor = "F" + str(((21 * (numero_quadros + 5)) + 13))
-                sheet.write(celula_add_6_5_cor, str(cor_5_6))
+                sheet.write(celula_add_6_5_cor, str(result_6_5_cor))
 
-                cor_6_6 = result_6_6_cor
                 celula_add_6_6_cor = "G" + str(((21 * (numero_quadros + 5)) + 13))
-                sheet.write(celula_add_6_6_cor, str(cor_6_6))
+                sheet.write(celula_add_6_6_cor, str(result_6_6_cor))
 
-                fabricada_cor_6 = result_6_fabricada_cor
                 celula_add_6_fabricada_cor = "H" + str(((21 * (numero_quadros + 5)) + 13))
-                sheet.write(celula_add_6_fabricada_cor, str(fabricada_cor_6))
+                sheet.write(celula_add_6_fabricada_cor, str(result_6_fabricada_cor))
 
         altura_2_v = altura_2.get()
         if altura_2_v != "":
-            quantidade_quadros_v = quantidade_quadros.get()
+            quantidade_quadros_v = int(quantidade_quadros.get())
             if int(quantidade_quadros_v) >= 1:
                 altura_2_v = altura_2.get()
                 largura_2_v = largura_2.get()
                 espessura_2_v = espessura_2.get()
-                celula_add_2_dim = "A" + str(((21 * (numero_quadros + int(quantidade_quadros_v))) + 1))
+                celula_add_2_dim = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v))) + 1))
                 sheet.write(celula_add_2_dim, altura_2_v + " " + largura_2_v + " " + espessura_2_v)
 
-                unidades_1 = result_1_unidades
-                celula_add_1_uni = "A" + str(((21 * (numero_quadros + int(quantidade_quadros_v))) + 2))
-                sheet.write(celula_add_1_uni, str(unidades_1))
+                celula_add_1_uni = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v))) + 2))
+                sheet.write(celula_add_1_uni, str(result_1_unidades))
 
-                cliche_1 = result_1_cliche
-                celula_add_1_cliche = "A" + str(((21 * (numero_quadros + int(quantidade_quadros_v))) + 3))
-                sheet.write(celula_add_1_cliche, str(cliche_1))
+                celula_add_1_cliche = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v))) + 3))
+                sheet.write(celula_add_1_cliche, str(result_1_cliche))
 
-                tinta_1 = result_1_tinta
-                celula_add_1_tinta = "A" + str(((21 * (numero_quadros + int(quantidade_quadros_v))) + 4))
-                sheet.write(celula_add_1_tinta, str(tinta_1))
+                celula_add_1_tinta = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v))) + 4))
+                sheet.write(celula_add_1_tinta, str(result_1_tinta))
 
-                n_cores_1 = result_1_n_cores
-                celula_add_1_n_cores = "A" + str(((21 * (numero_quadros + int(quantidade_quadros_v))) + 5))
-                sheet.write(celula_add_1_n_cores, str(n_cores_1))
+                celula_add_1_n_cores = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v))) + 5))
+                sheet.write(celula_add_1_n_cores, str(result_1_n_cores))
 
-                n_caixas_1 = result_1_n_caixas
-                celula_add_1_n_caixas = "A" + str(((21 * (numero_quadros + int(quantidade_quadros_v))) + 6))
-                sheet.write(celula_add_1_n_caixas, str(n_caixas_1))
+                celula_add_1_n_caixas = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v))) + 6))
+                sheet.write(celula_add_1_n_caixas, str(result_1_n_caixas))
 
-                tipo_cliente_1 = result_1_tipo_clientes
-                celula_add_1_tipo_cliente = "A" + str(((21 * (numero_quadros + int(quantidade_quadros_v))) + 7))
-                sheet.write(celula_add_1_tipo_cliente, str(tipo_cliente_1))
+                celula_add_1_tipo_cliente = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v))) + 7))
+                sheet.write(celula_add_1_tipo_cliente, str(result_1_tipo_clientes))
 
-                servico_1_1 = result_1_servicos_1
-                celula_add_1_servico_1 = "A" + str(((21 * (numero_quadros + int(quantidade_quadros_v))) + 8))
-                sheet.write(celula_add_1_servico_1, str(servico_1_1))
+                celula_add_1_servico_1 = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v))) + 8))
+                sheet.write(celula_add_1_servico_1, str(result_1_servicos_1))
 
-                servico_2_1 = result_1_servicos_2
-                celula_add_1_servico_2 = "A" + str(((21 * (numero_quadros + int(quantidade_quadros_v))) + 9))
-                sheet.write(celula_add_1_servico_2, str(servico_2_1))
+                celula_add_1_servico_2 = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v))) + 9))
+                sheet.write(celula_add_1_servico_2, str(result_1_servicos_2))
 
-                caixas_1 = result_1_caixas
-                celula_add_1_caixas = "A" + str(((21 * (numero_quadros + int(quantidade_quadros_v))) + 10))
-                sheet.write(celula_add_1_caixas, str(caixas_1))
+                celula_add_1_caixas = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v))) + 10))
+                sheet.write(celula_add_1_caixas, str(result_1_caixas))
 
-                total_1 = result_1_total
-                celula_add_1_total = "A" + str(((21 * (numero_quadros + int(quantidade_quadros_v))) + 11))
-                sheet.write(celula_add_1_total, str(total_1))
+                celula_add_1_total = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v))) + 11))
+                sheet.write(celula_add_1_total, str(result_1_total))
 
-                s_espessura_1 = result_1_espessura
-                celula_add_1_espessura = "A" + str(((21 * (numero_quadros + int(quantidade_quadros_v))) + 12))
-                sheet.write(celula_add_1_espessura, str(s_espessura_1))
+                celula_add_1_espessura = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v))) + 12))
+                sheet.write(celula_add_1_espessura, str(result_1_espessura))
 
-                cor_1_1 = result_1_1_cor
-                celula_add_1_1_cor = "B" + str(((21 * (numero_quadros + int(quantidade_quadros_v))) + 13))
-                sheet.write(celula_add_1_1_cor, str(cor_1_1))
+                celula_add_1_1_cor = "B" + str(((21 * (numero_quadros + (quantidade_quadros_v))) + 13))
+                sheet.write(celula_add_1_1_cor, str(result_1_1_cor))
 
-                cor_2_1 = result_1_2_cor
-                celula_add_1_2_cor = "C" + str(((21 * (numero_quadros + int(quantidade_quadros_v))) + 13))
-                sheet.write(celula_add_1_2_cor, str(cor_2_1))
+                celula_add_1_2_cor = "C" + str(((21 * (numero_quadros + (quantidade_quadros_v))) + 13))
+                sheet.write(celula_add_1_2_cor, str(result_1_2_cor))
 
-                cor_3_1 = result_1_3_cor
-                celula_add_1_3_cor = "D" + str(((21 * (numero_quadros + int(quantidade_quadros_v))) + 13))
-                sheet.write(celula_add_1_3_cor, str(cor_3_1))
+                celula_add_1_3_cor = "D" + str(((21 * (numero_quadros + (quantidade_quadros_v))) + 13))
+                sheet.write(celula_add_1_3_cor, str(result_1_3_cor))
 
-                cor_4_1 = result_1_4_cor
-                celula_add_1_4_cor = "E" + str(((21 * (numero_quadros + int(quantidade_quadros_v))) + 13))
-                sheet.write(celula_add_1_4_cor, str(cor_4_1))
+                celula_add_1_4_cor = "E" + str(((21 * (numero_quadros + (quantidade_quadros_v))) + 13))
+                sheet.write(celula_add_1_4_cor, str(result_1_4_cor))
 
-                cor_5_1 = result_1_5_cor
-                celula_add_1_5_cor = "F" + str(((21 * (numero_quadros + int(quantidade_quadros_v))) + 13))
-                sheet.write(celula_add_1_5_cor, str(cor_5_1))
+                celula_add_1_5_cor = "F" + str(((21 * (numero_quadros + (quantidade_quadros_v))) + 13))
+                sheet.write(celula_add_1_5_cor, str(result_1_5_cor))
 
-                cor_6_1 = result_1_6_cor
-                celula_add_1_6_cor = "G" + str(((21 * (numero_quadros + int(quantidade_quadros_v))) + 13))
-                sheet.write(celula_add_1_6_cor, str(cor_6_1))
+                celula_add_1_6_cor = "G" + str(((21 * (numero_quadros + (quantidade_quadros_v))) + 13))
+                sheet.write(celula_add_1_6_cor, str(result_1_6_cor))
 
-                fabricada_cor_1 = result_1_fabricada_cor
-                celula_add_1_fabricada_cor = "H" + str(((21 * (numero_quadros + int(quantidade_quadros_v))) + 13))
-                sheet.write(celula_add_1_fabricada_cor, str(fabricada_cor_1))
+                celula_add_1_fabricada_cor = "H" + str(((21 * (numero_quadros + (quantidade_quadros_v))) + 13))
+                sheet.write(celula_add_1_fabricada_cor, str(result_1_fabricada_cor))
 
             if int(quantidade_quadros_v) >= 2:
                 altura_2_v = altura_2.get()
                 largura_2_v = largura_2.get()
                 espessura_2_v = espessura_2.get()
-                celula_add_2_dim = "A" + str(((21 * (numero_quadros + int(quantidade_quadros_v) + 1)) + 1))
+                celula_add_2_dim = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v) + 1)) + 1))
                 sheet.write(celula_add_2_dim, altura_2_v + " " + largura_2_v + " " + espessura_2_v)
 
-                unidades_2 = result_2_unidades
-                celula_add_2_uni = "A" + str(((21 * (numero_quadros + int(quantidade_quadros_v) + 1)) + 2))
-                sheet.write(celula_add_2_uni, str(unidades_2))
+                celula_add_2_uni = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v) + 1)) + 2))
+                sheet.write(celula_add_2_uni, str(result_2_unidades))
 
-                cliche_2 = result_2_cliche
-                celula_add_2_cliche = "A" + str(((21 * (numero_quadros + int(quantidade_quadros_v) + 1)) + 3))
-                sheet.write(celula_add_2_cliche, str(cliche_2))
+                celula_add_2_cliche = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v) + 1)) + 3))
+                sheet.write(celula_add_2_cliche, str(result_2_cliche))
 
-                tinta_2 = result_2_tinta
-                celula_add_2_tinta = "A" + str(((21 * (numero_quadros + int(quantidade_quadros_v) + 1)) + 4))
-                sheet.write(celula_add_2_tinta, str(tinta_2))
+                celula_add_2_tinta = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v) + 1)) + 4))
+                sheet.write(celula_add_2_tinta, str(result_2_tinta))
 
-                n_cores_2 = result_2_n_cores
-                celula_add_2_n_cores = "A" + str(((21 * (numero_quadros + int(quantidade_quadros_v) + 1)) + 5))
-                sheet.write(celula_add_2_n_cores, str(n_cores_2))
+                celula_add_2_n_cores = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v) + 1)) + 5))
+                sheet.write(celula_add_2_n_cores, str(result_2_n_cores))
 
-                n_caixas_2 = result_2_n_caixas
-                celula_add_2_n_caixas = "A" + str(((21 * (numero_quadros + int(quantidade_quadros_v) + 1)) + 6))
-                sheet.write(celula_add_2_n_caixas, str(n_caixas_2))
+                celula_add_2_n_caixas = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v) + 1)) + 6))
+                sheet.write(celula_add_2_n_caixas, str(result_2_n_caixas))
 
-                tipo_cliente_2 = result_2_tipo_clientes
-                celula_add_2_tipo_cliente = "A" + str(((21 * (numero_quadros + int(quantidade_quadros_v) + 1)) + 7))
-                sheet.write(celula_add_2_tipo_cliente, str(tipo_cliente_2))
+                celula_add_2_tipo_cliente = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v) + 1)) + 7))
+                sheet.write(celula_add_2_tipo_cliente, str(result_2_tipo_clientes))
 
-                servico_1_2 = result_2_servicos_1
-                celula_add_2_servico_1 = "A" + str(((21 * (numero_quadros + int(quantidade_quadros_v) + 1)) + 8))
-                sheet.write(celula_add_2_servico_1, str(servico_1_2))
+                celula_add_2_servico_1 = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v) + 1)) + 8))
+                sheet.write(celula_add_2_servico_1, str(result_2_servicos_1))
 
-                servico_2_2 = result_2_servicos_2
-                celula_add_2_servico_2 = "A" + str(((21 * (numero_quadros + int(quantidade_quadros_v) + 1)) + 9))
-                sheet.write(celula_add_2_servico_2, str(servico_2_2))
+                celula_add_2_servico_2 = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v) + 1)) + 9))
+                sheet.write(celula_add_2_servico_2, str(result_2_servicos_2))
 
-                caixas_2 = result_2_caixas
-                celula_add_2_caixas = "A" + str(((21 * (numero_quadros + int(quantidade_quadros_v) + 1)) + 10))
-                sheet.write(celula_add_2_caixas, str(caixas_2))
+                celula_add_2_caixas = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v) + 1)) + 10))
+                sheet.write(celula_add_2_caixas, str(result_2_caixas))
 
-                total_2 = result_2_total
-                celula_add_2_total = "A" + str(((21 * (numero_quadros + int(quantidade_quadros_v) + 1)) + 11))
-                sheet.write(celula_add_2_total, str(total_2))
+                celula_add_2_total = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v) + 1)) + 11))
+                sheet.write(celula_add_2_total, str(result_2_total))
 
-                s_espessura_2 = result_2_espessura
-                celula_add_2_espessura = "A" + str(((21 * (numero_quadros + int(quantidade_quadros_v) + 1)) + 12))
-                sheet.write(celula_add_2_espessura, str(s_espessura_2))
+                celula_add_2_espessura = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v) + 1)) + 12))
+                sheet.write(celula_add_2_espessura, str(result_2_espessura))
 
-                cor_1_2 = result_2_1_cor
-                celula_add_2_1_cor = "B" + str(((21 * (numero_quadros + int(quantidade_quadros_v) + 1)) + 13))
-                sheet.write(celula_add_2_1_cor, str(cor_1_2))
+                celula_add_2_1_cor = "B" + str(((21 * (numero_quadros + (quantidade_quadros_v) + 1)) + 13))
+                sheet.write(celula_add_2_1_cor, str(result_2_1_cor))
 
-                cor_2_2 = result_2_2_cor
-                celula_add_2_2_cor = "C" + str(((21 * (numero_quadros + int(quantidade_quadros_v) + 1)) + 13))
-                sheet.write(celula_add_2_2_cor, str(cor_2_2))
+                celula_add_2_2_cor = "C" + str(((21 * (numero_quadros + (quantidade_quadros_v) + 1)) + 13))
+                sheet.write(celula_add_2_2_cor, str(result_2_2_cor))
 
-                cor_3_2 = result_2_3_cor
-                celula_add_2_3_cor = "D" + str(((21 * (numero_quadros + int(quantidade_quadros_v) + 1)) + 13))
-                sheet.write(celula_add_2_3_cor, str(cor_3_2))
+                celula_add_2_3_cor = "D" + str(((21 * (numero_quadros + (quantidade_quadros_v) + 1)) + 13))
+                sheet.write(celula_add_2_3_cor, str(result_2_3_cor))
 
-                cor_4_2 = result_2_4_cor
-                celula_add_2_4_cor = "E" + str(((21 * (numero_quadros + int(quantidade_quadros_v) + 1)) + 13))
-                sheet.write(celula_add_2_4_cor, str(cor_4_2))
+                celula_add_2_4_cor = "E" + str(((21 * (numero_quadros + (quantidade_quadros_v) + 1)) + 13))
+                sheet.write(celula_add_2_4_cor, str(result_2_4_cor))
 
-                cor_5_2 = result_2_5_cor
-                celula_add_2_5_cor = "F" + str(((21 * (numero_quadros + int(quantidade_quadros_v) + 1)) + 13))
-                sheet.write(celula_add_2_5_cor, str(cor_5_2))
+                celula_add_2_5_cor = "F" + str(((21 * (numero_quadros + (quantidade_quadros_v) + 1)) + 13))
+                sheet.write(celula_add_2_5_cor, str(result_2_5_cor))
 
-                cor_6_2 = result_2_6_cor
-                celula_add_2_6_cor = "G" + str(((21 * (numero_quadros + int(quantidade_quadros_v) + 1)) + 13))
-                sheet.write(celula_add_2_6_cor, str(cor_6_2))
+                celula_add_2_6_cor = "G" + str(((21 * (numero_quadros + (quantidade_quadros_v) + 1)) + 13))
+                sheet.write(celula_add_2_6_cor, str(result_2_6_cor))
 
-                fabricada_cor_2 = result_2_fabricada_cor
-                celula_add_2_fabricada_cor = "H" + str(((21 * (numero_quadros + int(quantidade_quadros_v) + 1)) + 13))
-                sheet.write(celula_add_2_fabricada_cor, str(fabricada_cor_2))
+                celula_add_2_fabricada_cor = "H" + str(((21 * (numero_quadros + (quantidade_quadros_v) + 1)) + 13))
+                sheet.write(celula_add_2_fabricada_cor, str(result_2_fabricada_cor))
 
             if int(quantidade_quadros_v) >= 3:
                 altura_2_v = altura_2.get()
                 largura_2_v = largura_2.get()
                 espessura_2_v = espessura_2.get()
-                celula_add_2_dim = "A" + str(((21 * (numero_quadros + int(quantidade_quadros_v) + 2)) + 1))
+                celula_add_2_dim = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v) + 2)) + 1))
                 sheet.write(celula_add_2_dim, altura_2_v + " " + largura_2_v + " " + espessura_2_v)
                 unidades_3 = result_3_unidades
-                celula_add_3_uni = "A" + str(((21 * (numero_quadros + int(quantidade_quadros_v) + 2)) + 2))
+                celula_add_3_uni = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v) + 2)) + 2))
                 sheet.write(celula_add_3_uni, str(unidades_3))
 
-                cliche_3 = result_3_cliche
-                celula_add_3_cliche = "A" + str(((21 * (numero_quadros + int(quantidade_quadros_v) + 2)) + 3))
-                sheet.write(celula_add_3_cliche, str(cliche_3))
+                celula_add_3_cliche = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v) + 2)) + 3))
+                sheet.write(celula_add_3_cliche, str(result_3_cliche))
 
-                tinta_3 = result_3_tinta
-                celula_add_3_tinta = "A" + str(((21 * (numero_quadros + int(quantidade_quadros_v) + 2)) + 4))
-                sheet.write(celula_add_3_tinta, str(tinta_3))
+                celula_add_3_tinta = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v) + 2)) + 4))
+                sheet.write(celula_add_3_tinta, str(result_3_tinta))
 
-                n_cores_3 = result_3_n_cores
-                celula_add_3_n_cores = "A" + str(((21 * (numero_quadros + int(quantidade_quadros_v) + 2)) + 5))
-                sheet.write(celula_add_3_n_cores, str(n_cores_3))
+                celula_add_3_n_cores = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v) + 2)) + 5))
+                sheet.write(celula_add_3_n_cores, str(result_3_n_cores))
 
-                n_caixas_3 = result_3_n_caixas
-                celula_add_3_n_caixas = "A" + str(((21 * (numero_quadros + int(quantidade_quadros_v) + 2)) + 6))
-                sheet.write(celula_add_3_n_caixas, str(n_caixas_3))
+                celula_add_3_n_caixas = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v) + 2)) + 6))
+                sheet.write(celula_add_3_n_caixas, str(result_3_n_caixas))
 
-                tipo_cliente_3 = result_3_tipo_clientes
-                celula_add_3_tipo_cliente = "A" + str(((21 * (numero_quadros + int(quantidade_quadros_v) + 2)) + 7))
-                sheet.write(celula_add_3_tipo_cliente, str(tipo_cliente_3))
+                celula_add_3_tipo_cliente = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v) + 2)) + 7))
+                sheet.write(celula_add_3_tipo_cliente, str(result_3_tipo_clientes))
 
-                servico_1_3 = result_3_servicos_1
-                celula_add_3_servico_1 = "A" + str(((21 * (numero_quadros + int(quantidade_quadros_v) + 2)) + 8))
-                sheet.write(celula_add_3_servico_1, str(servico_1_3))
+                celula_add_3_servico_1 = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v) + 2)) + 8))
+                sheet.write(celula_add_3_servico_1, str(result_3_servicos_1))
 
-                servico_2_3 = result_3_servicos_2
-                celula_add_3_servico_2 = "A" + str(((21 * (numero_quadros + int(quantidade_quadros_v) + 2)) + 9))
-                sheet.write(celula_add_3_servico_2, str(servico_2_3))
+                celula_add_3_servico_2 = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v) + 2)) + 9))
+                sheet.write(celula_add_3_servico_2, str(result_3_servicos_2))
 
-                caixas_3 = result_3_caixas
-                celula_add_3_caixas = "A" + str(((21 * (numero_quadros + int(quantidade_quadros_v) + 2)) + 10))
-                sheet.write(celula_add_3_caixas, str(caixas_3))
+                celula_add_3_caixas = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v) + 2)) + 10))
+                sheet.write(celula_add_3_caixas, str(result_3_caixas))
 
-                total_3 = result_3_total
-                celula_add_3_total = "A" + str(((21 * (numero_quadros + int(quantidade_quadros_v) + 2)) + 11))
-                sheet.write(celula_add_3_total, str(total_3))
+                celula_add_3_total = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v) + 2)) + 11))
+                sheet.write(celula_add_3_total, str(result_3_total))
 
-                s_espessura_3 = result_3_espessura
-                celula_add_3_espessura = "A" + str(((21 * (numero_quadros + int(quantidade_quadros_v) + 2)) + 12))
-                sheet.write(celula_add_3_espessura, str(s_espessura_3))
+                celula_add_3_espessura = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v) + 2)) + 12))
+                sheet.write(celula_add_3_espessura, str(result_3_espessura))
 
-                cor_1_3 = result_3_1_cor
-                celula_add_3_1_cor = "B" + str(((21 * (numero_quadros + int(quantidade_quadros_v) + 2)) + 13))
-                sheet.write(celula_add_3_1_cor, str(cor_1_3))
+                celula_add_3_1_cor = "B" + str(((21 * (numero_quadros + (quantidade_quadros_v) + 2)) + 13))
+                sheet.write(celula_add_3_1_cor, str(result_3_1_cor))
 
-                cor_2_3 = result_3_2_cor
-                celula_add_3_2_cor = "C" + str(((21 * (numero_quadros + int(quantidade_quadros_v) + 2)) + 13))
-                sheet.write(celula_add_3_2_cor, str(cor_2_3))
+                celula_add_3_2_cor = "C" + str(((21 * (numero_quadros + (quantidade_quadros_v) + 2)) + 13))
+                sheet.write(celula_add_3_2_cor, str(result_3_2_cor))
 
-                cor_3_3 = result_3_3_cor
-                celula_add_3_3_cor = "D" + str(((21 * (numero_quadros + int(quantidade_quadros_v) + 2)) + 13))
-                sheet.write(celula_add_3_3_cor, str(cor_3_3))
+                celula_add_3_3_cor = "D" + str(((21 * (numero_quadros + (quantidade_quadros_v) + 2)) + 13))
+                sheet.write(celula_add_3_3_cor, str(result_3_3_cor))
 
-                cor_4_3 = result_3_4_cor
-                celula_add_3_4_cor = "E" + str(((21 * (numero_quadros + int(quantidade_quadros_v) + 2)) + 13))
-                sheet.write(celula_add_3_4_cor, str(cor_4_3))
+                celula_add_3_4_cor = "E" + str(((21 * (numero_quadros + (quantidade_quadros_v) + 2)) + 13))
+                sheet.write(celula_add_3_4_cor, str(result_3_4_cor))
 
-                cor_5_3 = result_3_5_cor
-                celula_add_3_5_cor = "F" + str(((21 * (numero_quadros + int(quantidade_quadros_v) + 2)) + 13))
-                sheet.write(celula_add_3_5_cor, str(cor_5_3))
+                celula_add_3_5_cor = "F" + str(((21 * (numero_quadros + (quantidade_quadros_v) + 2)) + 13))
+                sheet.write(celula_add_3_5_cor, str(result_3_5_cor))
 
-                cor_6_3 = result_3_6_cor
-                celula_add_3_6_cor = "G" + str(((21 * (numero_quadros + int(quantidade_quadros_v) + 2)) + 13))
-                sheet.write(celula_add_3_6_cor, str(cor_6_3))
+                celula_add_3_6_cor = "G" + str(((21 * (numero_quadros + (quantidade_quadros_v) + 2)) + 13))
+                sheet.write(celula_add_3_6_cor, str(result_3_6_cor))
 
-                fabricada_cor_3 = result_3_fabricada_cor
-                celula_add_3_fabricada_cor = "H" + str(((21 * (numero_quadros + int(quantidade_quadros_v) + 2)) + 13))
-                sheet.write(celula_add_3_fabricada_cor, str(fabricada_cor_3))
+                celula_add_3_fabricada_cor = "H" + str(((21 * (numero_quadros + (quantidade_quadros_v) + 2)) + 13))
+                sheet.write(celula_add_3_fabricada_cor, str(result_3_fabricada_cor))
 
             if int(quantidade_quadros_v) >= 4:
                 altura_2_v = altura_2.get()
                 largura_2_v = largura_2.get()
                 espessura_2_v = espessura_2.get()
-                celula_add_2_dim = "A" + str(((21 * (numero_quadros + int(quantidade_quadros_v) + 3)) + 1))
+                celula_add_2_dim = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v) + 3)) + 1))
                 sheet.write(celula_add_2_dim, altura_2_v + " " + largura_2_v + " " + espessura_2_v)
-                unidades_4 = result_4_unidades
-                celula_add_4_uni = "A" + str(((21 * (numero_quadros + int(quantidade_quadros_v) + 3)) + 2))
-                sheet.write(celula_add_4_uni, str(unidades_4))
 
-                cliche_4 = result_4_cliche
-                celula_add_4_cliche = "A" + str(((21 * (numero_quadros + int(quantidade_quadros_v) + 3)) + 3))
-                sheet.write(celula_add_4_cliche, str(cliche_4))
+                celula_add_4_uni = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v) + 3)) + 2))
+                sheet.write(celula_add_4_uni, str(result_4_unidades))
 
-                tinta_4 = result_4_tinta
-                celula_add_4_tinta = "A" + str(((21 * (numero_quadros + int(quantidade_quadros_v) + 3)) + 4))
-                sheet.write(celula_add_4_tinta, str(tinta_4))
+                celula_add_4_cliche = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v) + 3)) + 3))
+                sheet.write(celula_add_4_cliche, str(result_4_cliche))
 
-                n_cores_4 = result_4_n_cores
-                celula_add_4_n_cores = "A" + str(((21 * (numero_quadros + int(quantidade_quadros_v) + 3)) + 5))
-                sheet.write(celula_add_4_n_cores, str(n_cores_4))
+                celula_add_4_tinta = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v) + 3)) + 4))
+                sheet.write(celula_add_4_tinta, str(result_4_tinta))
 
-                n_caixas_4 = result_4_n_caixas
-                celula_add_4_n_caixas = "A" + str(((21 * (numero_quadros + int(quantidade_quadros_v) + 3)) + 6))
-                sheet.write(celula_add_4_n_caixas, str(n_caixas_4))
+                celula_add_4_n_cores = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v) + 3)) + 5))
+                sheet.write(celula_add_4_n_cores, str(result_4_n_cores))
 
-                tipo_cliente_4 = result_4_tipo_clientes
-                celula_add_4_tipo_cliente = "A" + str(((21 * (numero_quadros + int(quantidade_quadros_v) + 3)) + 7))
-                sheet.write(celula_add_4_tipo_cliente, str(tipo_cliente_4))
+                celula_add_4_n_caixas = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v) + 3)) + 6))
+                sheet.write(celula_add_4_n_caixas, str(result_4_n_caixas))
 
-                servico_1_4 = result_4_servicos_1
-                celula_add_4_servico_1 = "A" + str(((21 * (numero_quadros + int(quantidade_quadros_v) + 3)) + 8))
-                sheet.write(celula_add_4_servico_1, str(servico_1_4))
+                celula_add_4_tipo_cliente = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v) + 3)) + 7))
+                sheet.write(celula_add_4_tipo_cliente, str(result_4_tipo_clientes))
 
-                servico_2_4 = result_4_servicos_2
-                celula_add_4_servico_2 = "A" + str(((21 * (numero_quadros + int(quantidade_quadros_v) + 3)) + 9))
-                sheet.write(celula_add_4_servico_2, str(servico_2_4))
+                celula_add_4_servico_1 = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v) + 3)) + 8))
+                sheet.write(celula_add_4_servico_1, str(result_4_servicos_1))
 
-                caixas_4 = result_4_caixas
-                celula_add_4_caixas = "A" + str(((21 * (numero_quadros + int(quantidade_quadros_v) + 3)) + 10))
-                sheet.write(celula_add_4_caixas, str(caixas_4))
+                celula_add_4_servico_2 = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v) + 3)) + 9))
+                sheet.write(celula_add_4_servico_2, str(result_4_servicos_2))
 
-                total_4 = result_4_total
-                celula_add_4_total = "A" + str(((21 * (numero_quadros + int(quantidade_quadros_v) + 3)) + 11))
-                sheet.write(celula_add_4_total, str(total_4))
+                celula_add_4_caixas = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v) + 3)) + 10))
+                sheet.write(celula_add_4_caixas, str(result_4_caixas))
 
-                s_espessura_4 = result_4_espessura
-                celula_add_4_espessura = "A" + str(((21 * (numero_quadros + int(quantidade_quadros_v) + 3)) + 12))
-                sheet.write(celula_add_4_espessura, str(s_espessura_4))
+                celula_add_4_total = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v) + 3)) + 11))
+                sheet.write(celula_add_4_total, str(result_4_total))
 
-                cor_1_4 = result_4_1_cor
-                celula_add_4_1_cor = "B" + str(((21 * (numero_quadros + int(quantidade_quadros_v) + 3)) + 13))
-                sheet.write(celula_add_4_1_cor, str(cor_1_4))
+                celula_add_4_espessura = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v) + 3)) + 12))
+                sheet.write(celula_add_4_espessura, str(result_4_espessura))
 
-                cor_2_4 = result_4_2_cor
-                celula_add_4_2_cor = "C" + str(((21 * (numero_quadros + int(quantidade_quadros_v) + 3)) + 13))
-                sheet.write(celula_add_4_2_cor, str(cor_2_4))
+                celula_add_4_1_cor = "B" + str(((21 * (numero_quadros + (quantidade_quadros_v) + 3)) + 13))
+                sheet.write(celula_add_4_1_cor, str(result_4_1_cor))
 
-                cor_3_4 = result_4_3_cor
-                celula_add_4_3_cor = "D" + str(((21 * (numero_quadros + int(quantidade_quadros_v) + 3)) + 13))
-                sheet.write(celula_add_4_3_cor, str(cor_3_4))
+                celula_add_4_2_cor = "C" + str(((21 * (numero_quadros + (quantidade_quadros_v) + 3)) + 13))
+                sheet.write(celula_add_4_2_cor, str(result_4_2_cor))
 
-                cor_4_4 = result_4_4_cor
-                celula_add_4_4_cor = "E" + str(((21 * (numero_quadros + int(quantidade_quadros_v) + 3)) + 13))
-                sheet.write(celula_add_4_4_cor, str(cor_4_4))
+                celula_add_4_3_cor = "D" + str(((21 * (numero_quadros + (quantidade_quadros_v) + 3)) + 13))
+                sheet.write(celula_add_4_3_cor, str(result_4_3_cor))
 
-                cor_5_4 = result_4_5_cor
-                celula_add_4_5_cor = "F" + str(((21 * (numero_quadros + int(quantidade_quadros_v) + 3)) + 13))
-                sheet.write(celula_add_4_5_cor, str(cor_5_4))
+                celula_add_4_4_cor = "E" + str(((21 * (numero_quadros + (quantidade_quadros_v) + 3)) + 13))
+                sheet.write(celula_add_4_4_cor, str(result_4_4_cor))
 
-                cor_6_4 = result_4_6_cor
-                celula_add_4_6_cor = "G" + str(((21 * (numero_quadros + int(quantidade_quadros_v) + 3)) + 13))
-                sheet.write(celula_add_4_6_cor, str(cor_6_4))
+                celula_add_4_5_cor = "F" + str(((21 * (numero_quadros + (quantidade_quadros_v) + 3)) + 13))
+                sheet.write(celula_add_4_5_cor, str(result_4_5_cor))
 
-                fabricada_cor_4 = result_4_fabricada_cor
-                celula_add_4_fabricada_cor = "H" + str(((21 * (numero_quadros + int(quantidade_quadros_v) + 3)) + 13))
-                sheet.write(celula_add_4_fabricada_cor, str(fabricada_cor_4))
+                celula_add_4_6_cor = "G" + str(((21 * (numero_quadros + (quantidade_quadros_v) + 3)) + 13))
+                sheet.write(celula_add_4_6_cor, str(result_4_6_cor))
+
+                celula_add_4_fabricada_cor = "H" + str(((21 * (numero_quadros + (quantidade_quadros_v) + 3)) + 13))
+                sheet.write(celula_add_4_fabricada_cor, str(result_4_fabricada_cor))
 
             if int(quantidade_quadros_v) >= 5:
                 altura_2_v = altura_2.get()
                 largura_2_v = largura_2.get()
                 espessura_2_v = espessura_2.get()
-                celula_add_2_dim = "A" + str(((21 * (numero_quadros + int(quantidade_quadros_v) + 4)) + 1))
+                celula_add_2_dim = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v) + 4)) + 1))
                 sheet.write(celula_add_2_dim, altura_2_v + " " + largura_2_v + " " + espessura_2_v)
 
-                unidades_5 = result_5_unidades
-                celula_add_5_uni = "A" + str(((21 * (numero_quadros + int(quantidade_quadros_v) + 4)) + 2))
-                sheet.write(celula_add_5_uni, str(unidades_5))
+                celula_add_5_uni = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v) + 4)) + 2))
+                sheet.write(celula_add_5_uni, str(result_5_unidades))
 
-                cliche_5 = result_5_cliche
-                celula_add_5_cliche = "A" + str(((21 * (numero_quadros + int(quantidade_quadros_v) + 4)) + 3))
-                sheet.write(celula_add_5_cliche, str(cliche_5))
+                celula_add_5_cliche = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v) + 4)) + 3))
+                sheet.write(celula_add_5_cliche, str(result_5_cliche))
 
-                tinta_5 = result_5_tinta
-                celula_add_5_tinta = "A" + str(((21 * (numero_quadros + int(quantidade_quadros_v) + 4)) + 4))
-                sheet.write(celula_add_5_tinta, str(tinta_5))
+                celula_add_5_tinta = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v) + 4)) + 4))
+                sheet.write(celula_add_5_tinta, str(result_5_tinta))
 
-                n_cores_5 = result_5_n_cores
-                celula_add_5_n_cores = "A" + str(((21 * (numero_quadros + int(quantidade_quadros_v) + 4)) + 5))
-                sheet.write(celula_add_5_n_cores, str(n_cores_5))
+                celula_add_5_n_cores = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v) + 4)) + 5))
+                sheet.write(celula_add_5_n_cores, str(result_5_n_cores))
 
-                n_caixas_5 = result_5_n_caixas
-                celula_add_5_n_caixas = "A" + str(((21 * (numero_quadros + int(quantidade_quadros_v) + 4)) + 6))
-                sheet.write(celula_add_5_n_caixas, str(n_caixas_5))
+                celula_add_5_n_caixas = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v) + 4)) + 6))
+                sheet.write(celula_add_5_n_caixas, str(result_5_n_caixas))
 
-                tipo_cliente_5 = result_5_tipo_clientes
-                celula_add_5_tipo_cliente = "A" + str(((21 * (numero_quadros + int(quantidade_quadros_v) + 4)) + 7))
-                sheet.write(celula_add_5_tipo_cliente, str(tipo_cliente_5))
+                celula_add_5_tipo_cliente = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v) + 4)) + 7))
+                sheet.write(celula_add_5_tipo_cliente, str(result_5_tipo_clientes))
 
-                servico_1_5 = result_5_servicos_1
-                celula_add_5_servico_1 = "A" + str(((21 * (numero_quadros + int(quantidade_quadros_v) + 4)) + 8))
-                sheet.write(celula_add_5_servico_1, str(servico_1_5))
+                celula_add_5_servico_1 = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v) + 4)) + 8))
+                sheet.write(celula_add_5_servico_1, str(result_5_servicos_1))
 
-                servico_2_5 = result_5_servicos_2
-                celula_add_5_servico_2 = "A" + str(((21 * (numero_quadros + int(quantidade_quadros_v) + 4)) + 9))
-                sheet.write(celula_add_5_servico_2, str(servico_2_5))
+                celula_add_5_servico_2 = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v) + 4)) + 9))
+                sheet.write(celula_add_5_servico_2, str(result_5_servicos_2))
 
-                caixas_5 = result_5_caixas
-                celula_add_5_caixas = "A" + str(((21 * (numero_quadros + int(quantidade_quadros_v) + 4)) + 10))
-                sheet.write(celula_add_5_caixas, str(caixas_5))
+                celula_add_5_caixas = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v) + 4)) + 10))
+                sheet.write(celula_add_5_caixas, str(result_5_caixas))
 
-                total_5 = result_5_total
-                celula_add_5_total = "A" + str(((21 * (numero_quadros + int(quantidade_quadros_v) + 4)) + 11))
-                sheet.write(celula_add_5_total, str(total_5))
+                celula_add_5_total = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v) + 4)) + 11))
+                sheet.write(celula_add_5_total, str(result_5_total))
 
-                s_espessura_5 = result_5_espessura
-                celula_add_5_espessura = "A" + str(((21 * (numero_quadros + int(quantidade_quadros_v) + 4)) + 12))
-                sheet.write(celula_add_5_espessura, str(s_espessura_5))
+                celula_add_5_espessura = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v) + 4)) + 12))
+                sheet.write(celula_add_5_espessura, str(result_5_espessura))
 
-                cor_1_5 = result_5_1_cor
-                celula_add_5_1_cor = "B" + str(((21 * (numero_quadros + int(quantidade_quadros_v) + 4)) + 13))
-                sheet.write(celula_add_5_1_cor, str(cor_1_5))
+                celula_add_5_1_cor = "B" + str(((21 * (numero_quadros + (quantidade_quadros_v) + 4)) + 13))
+                sheet.write(celula_add_5_1_cor, str(result_5_1_cor))
 
-                cor_2_5 = result_5_2_cor
-                celula_add_5_2_cor = "C" + str(((21 * (numero_quadros + int(quantidade_quadros_v) + 4)) + 13))
-                sheet.write(celula_add_5_2_cor, str(cor_2_5))
+                celula_add_5_2_cor = "C" + str(((21 * (numero_quadros + (quantidade_quadros_v) + 4)) + 13))
+                sheet.write(celula_add_5_2_cor, str(result_5_2_cor))
 
-                cor_3_5 = result_5_3_cor
-                celula_add_5_3_cor = "D" + str(((21 * (numero_quadros + int(quantidade_quadros_v) + 4)) + 13))
-                sheet.write(celula_add_5_3_cor, str(cor_3_5))
+                celula_add_5_3_cor = "D" + str(((21 * (numero_quadros + (quantidade_quadros_v) + 4)) + 13))
+                sheet.write(celula_add_5_3_cor, str(result_5_3_cor))
 
-                cor_4_5 = result_5_4_cor
-                celula_add_5_4_cor = "E" + str(((21 * (numero_quadros + int(quantidade_quadros_v) + 4)) + 13))
-                sheet.write(celula_add_5_4_cor, str(cor_4_5))
+                celula_add_5_4_cor = "E" + str(((21 * (numero_quadros + (quantidade_quadros_v) + 4)) + 13))
+                sheet.write(celula_add_5_4_cor, str(result_5_4_cor))
 
-                cor_5_5 = result_5_5_cor
-                celula_add_5_5_cor = "F" + str(((21 * (numero_quadros + int(quantidade_quadros_v) + 4)) + 13))
-                sheet.write(celula_add_5_5_cor, str(cor_5_5))
+                celula_add_5_5_cor = "F" + str(((21 * (numero_quadros + (quantidade_quadros_v) + 4)) + 13))
+                sheet.write(celula_add_5_5_cor, str(result_5_5_cor))
 
-                cor_6_5 = result_5_6_cor
-                celula_add_5_6_cor = "G" + str(((21 * (numero_quadros + int(quantidade_quadros_v) + 4)) + 13))
-                sheet.write(celula_add_5_6_cor, str(cor_6_5))
+                celula_add_5_6_cor = "G" + str(((21 * (numero_quadros + (quantidade_quadros_v) + 4)) + 13))
+                sheet.write(celula_add_5_6_cor, str(result_5_6_cor))
 
-                fabricada_cor_5 = result_5_fabricada_cor
-                celula_add_5_fabricada_cor = "H" + str(((21 * (numero_quadros + int(quantidade_quadros_v) + 4)) + 13))
-                sheet.write(celula_add_5_fabricada_cor, str(fabricada_cor_5))
+                celula_add_5_fabricada_cor = "H" + str(((21 * (numero_quadros + (quantidade_quadros_v) + 4)) + 13))
+                sheet.write(celula_add_5_fabricada_cor, str(result_5_fabricada_cor))
 
             if int(quantidade_quadros_v) >= 6:
                 altura_2_v = altura_2.get()
                 largura_2_v = largura_2.get()
                 espessura_2_v = espessura_2.get()
-                celula_add_2_dim = "A" + str(((21 * (numero_quadros + int(quantidade_quadros_v) + 5)) + 1))
+                celula_add_2_dim = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v) + 5)) + 1))
                 sheet.write(celula_add_2_dim, altura_2_v + " " + largura_2_v + " " + espessura_2_v)
-                unidades_6 = result_6_unidades
-                celula_add_6_uni = "A" + str(((21 * (numero_quadros + int(quantidade_quadros_v) + 5)) + 2))
-                sheet.write(celula_add_6_uni, str(unidades_6))
 
-                cliche_6 = result_6_cliche
-                celula_add_6_cliche = "A" + str(((21 * (numero_quadros + int(quantidade_quadros_v) + 5)) + 3))
-                sheet.write(celula_add_6_cliche, str(cliche_6))
+                celula_add_6_uni = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v) + 5)) + 2))
+                sheet.write(celula_add_6_uni, str(result_6_unidades))
 
-                tinta_6 = result_6_tinta
-                celula_add_6_tinta = "A" + str(((21 * (numero_quadros + int(quantidade_quadros_v) + 5)) + 4))
-                sheet.write(celula_add_6_tinta, str(tinta_6))
+                celula_add_6_cliche = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v) + 5)) + 3))
+                sheet.write(celula_add_6_cliche, str(result_6_cliche))
 
-                n_cores_6 = result_6_n_cores
-                celula_add_6_n_cores = "A" + str(((21 * (numero_quadros + int(quantidade_quadros_v) + 5)) + 5))
-                sheet.write(celula_add_6_n_cores, str(n_cores_6))
+                celula_add_6_tinta = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v) + 5)) + 4))
+                sheet.write(celula_add_6_tinta, str(result_6_tinta))
 
-                n_caixas_6 = result_6_n_caixas
-                celula_add_6_n_caixas = "A" + str(((21 * (numero_quadros + int(quantidade_quadros_v) + 5)) + 6))
-                sheet.write(celula_add_6_n_caixas, str(n_caixas_6))
+                celula_add_6_n_cores = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v) + 5)) + 5))
+                sheet.write(celula_add_6_n_cores, str(result_6_n_cores))
 
-                tipo_cliente_6 = result_6_tipo_clientes
-                celula_add_6_tipo_cliente = "A" + str(((21 * (numero_quadros + int(quantidade_quadros_v) + 5)) + 7))
-                sheet.write(celula_add_6_tipo_cliente, str(tipo_cliente_6))
+                celula_add_6_n_caixas = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v) + 5)) + 6))
+                sheet.write(celula_add_6_n_caixas, str(result_6_n_caixas))
 
-                servico_1_6 = result_6_servicos_1
-                celula_add_6_servico_1 = "A" + str(((21 * (numero_quadros + int(quantidade_quadros_v) + 5)) + 8))
-                sheet.write(celula_add_6_servico_1, str(servico_1_6))
+                celula_add_6_tipo_cliente = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v) + 5)) + 7))
+                sheet.write(celula_add_6_tipo_cliente, str(result_6_tipo_clientes))
 
-                servico_2_6 = result_6_servicos_2
-                celula_add_6_servico_2 = "A" + str(((21 * (numero_quadros + int(quantidade_quadros_v) + 5)) + 9))
-                sheet.write(celula_add_6_servico_2, str(servico_2_6))
+                celula_add_6_servico_1 = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v) + 5)) + 8))
+                sheet.write(celula_add_6_servico_1, str(result_6_servicos_1))
 
-                caixas_6 = result_6_caixas
-                celula_add_6_caixas = "A" + str(((21 * (numero_quadros + int(quantidade_quadros_v) + 5)) + 10))
-                sheet.write(celula_add_6_caixas, str(caixas_6))
+                celula_add_6_servico_2 = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v) + 5)) + 9))
+                sheet.write(celula_add_6_servico_2, str(result_6_servicos_2))
 
-                total_6 = result_6_total
-                celula_add_6_total = "A" + str(((21 * (numero_quadros + int(quantidade_quadros_v) + 5)) + 11))
-                sheet.write(celula_add_6_total, str(total_6))
+                celula_add_6_caixas = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v) + 5)) + 10))
+                sheet.write(celula_add_6_caixas, str(result_6_caixas))
 
-                s_espessura_6 = result_6_espessura
-                celula_add_6_espessura = "A" + str(((21 * (numero_quadros + int(quantidade_quadros_v) + 5)) + 12))
-                sheet.write(celula_add_6_espessura, str(s_espessura_6))
+                celula_add_6_total = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v) + 5)) + 11))
+                sheet.write(celula_add_6_total, str(result_6_total))
 
-                cor_1_6 = result_6_1_cor
-                celula_add_6_1_cor = "B" + str(((21 * (numero_quadros + int(quantidade_quadros_v) + 5)) + 13))
-                sheet.write(celula_add_6_1_cor, str(cor_1_6))
+                celula_add_6_espessura = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v) + 5)) + 12))
+                sheet.write(celula_add_6_espessura, str(result_6_espessura))
 
-                cor_2_6 = result_6_2_cor
-                celula_add_6_2_cor = "C" + str(((21 * (numero_quadros + int(quantidade_quadros_v) + 5)) + 13))
-                sheet.write(celula_add_6_2_cor, str(cor_2_6))
+                celula_add_6_1_cor = "B" + str(((21 * (numero_quadros + (quantidade_quadros_v) + 5)) + 13))
+                sheet.write(celula_add_6_1_cor, str(result_6_1_cor))
 
-                cor_3_6 = result_6_3_cor
-                celula_add_6_3_cor = "D" + str(((21 * (numero_quadros + int(quantidade_quadros_v) + 5)) + 13))
-                sheet.write(celula_add_6_3_cor, str(cor_3_6))
+                celula_add_6_2_cor = "C" + str(((21 * (numero_quadros + (quantidade_quadros_v) + 5)) + 13))
+                sheet.write(celula_add_6_2_cor, str(result_6_2_cor))
 
-                cor_4_6 = result_6_4_cor
-                celula_add_6_4_cor = "E" + str(((21 * (numero_quadros + int(quantidade_quadros_v) + 5)) + 13))
-                sheet.write(celula_add_6_4_cor, str(cor_4_6))
+                celula_add_6_3_cor = "D" + str(((21 * (numero_quadros + (quantidade_quadros_v) + 5)) + 13))
+                sheet.write(celula_add_6_3_cor, str(result_6_3_cor))
 
-                cor_5_6 = result_6_5_cor
-                celula_add_6_5_cor = "F" + str(((21 * (numero_quadros + int(quantidade_quadros_v) + 5)) + 13))
-                sheet.write(celula_add_6_5_cor, str(cor_5_6))
+                celula_add_6_4_cor = "E" + str(((21 * (numero_quadros + (quantidade_quadros_v) + 5)) + 13))
+                sheet.write(celula_add_6_4_cor, str(result_6_4_cor))
 
-                cor_6_6 = result_6_6_cor
-                celula_add_6_6_cor = "G" + str(((21 * (numero_quadros + int(quantidade_quadros_v) + 5)) + 13))
-                sheet.write(celula_add_6_6_cor, str(cor_6_6))
+                celula_add_6_5_cor = "F" + str(((21 * (numero_quadros + (quantidade_quadros_v) + 5)) + 13))
+                sheet.write(celula_add_6_5_cor, str(result_6_5_cor))
 
-                fabricada_cor_6 = result_6_fabricada_cor
-                celula_add_6_fabricada_cor = "H" + str(((21 * (numero_quadros + int(quantidade_quadros_v) + 5)) + 13))
-                sheet.write(celula_add_6_fabricada_cor, str(fabricada_cor_6))
+                celula_add_6_6_cor = "G" + str(((21 * (numero_quadros + (quantidade_quadros_v) + 5)) + 13))
+                sheet.write(celula_add_6_6_cor, str(result_6_6_cor))
+
+                celula_add_6_fabricada_cor = "H" + str(((21 * (numero_quadros + (quantidade_quadros_v) + 5)) + 13))
+                sheet.write(celula_add_6_fabricada_cor, str(result_6_fabricada_cor))
 
         altura_3_v = altura_3.get()
         if altura_3_v != "":
@@ -7444,77 +7215,59 @@ def botao_executar():
                 celula_add_3_dim = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2))) + 1))
                 sheet.write(celula_add_3_dim, altura_3_v + " " + largura_3_v + " " + espessura_3_v)
 
-                unidades_1 = result_1_unidades
                 celula_add_1_uni = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2))) + 2))
-                sheet.write(celula_add_1_uni, str(unidades_1))
+                sheet.write(celula_add_1_uni, str(result_1_unidades))
 
-                cliche_1 = result_1_cliche
                 celula_add_1_cliche = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2))) + 3))
-                sheet.write(celula_add_1_cliche, str(cliche_1))
+                sheet.write(celula_add_1_cliche, str(result_1_cliche))
 
-                tinta_1 = result_1_tinta
                 celula_add_1_tinta = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2))) + 4))
-                sheet.write(celula_add_1_tinta, str(tinta_1))
+                sheet.write(celula_add_1_tinta, str(result_1_tinta))
 
-                n_cores_1 = result_1_n_cores
                 celula_add_1_n_cores = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2))) + 5))
-                sheet.write(celula_add_1_n_cores, str(n_cores_1))
+                sheet.write(celula_add_1_n_cores, str(result_1_n_cores))
 
-                n_caixas_1 = result_1_n_caixas
                 celula_add_1_n_caixas = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2))) + 6))
-                sheet.write(celula_add_1_n_caixas, str(n_caixas_1))
+                sheet.write(celula_add_1_n_caixas, str(result_1_n_caixas))
 
-                tipo_cliente_1 = result_1_tipo_clientes
                 celula_add_1_tipo_cliente = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2))) + 7))
-                sheet.write(celula_add_1_tipo_cliente, str(tipo_cliente_1))
+                sheet.write(celula_add_1_tipo_cliente, str(result_1_tipo_clientes))
 
-                servico_1_1 = result_1_servicos_1
                 celula_add_1_servico_1 = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2))) + 8))
-                sheet.write(celula_add_1_servico_1, str(servico_1_1))
+                sheet.write(celula_add_1_servico_1, str(result_1_servicos_1))
 
-                servico_2_1 = result_1_servicos_2
                 celula_add_1_servico_2 = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2))) + 9))
-                sheet.write(celula_add_1_servico_2, str(servico_2_1))
+                sheet.write(celula_add_1_servico_2, str(result_1_servicos_2))
 
-                caixas_1 = result_1_caixas
                 celula_add_1_caixas = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2))) + 10))
-                sheet.write(celula_add_1_caixas, str(caixas_1))
+                sheet.write(celula_add_1_caixas, str(result_1_caixas))
 
-                total_1 = result_1_total
                 celula_add_1_total = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2))) + 11))
-                sheet.write(celula_add_1_total, str(total_1))
+                sheet.write(celula_add_1_total, str(result_1_total))
 
-                s_espessura_1 = result_1_espessura
                 celula_add_1_espessura = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2))) + 12))
-                sheet.write(celula_add_1_espessura, str(s_espessura_1))
+                sheet.write(celula_add_1_espessura, str(result_1_espessura))
 
-                cor_1_1 = result_1_1_cor
                 celula_add_1_1_cor = "B" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2))) + 13))
-                sheet.write(celula_add_1_1_cor, str(cor_1_1))
+                sheet.write(celula_add_1_1_cor, str(result_1_1_cor))
 
-                cor_2_1 = result_1_2_cor
                 celula_add_1_2_cor = "C" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2))) + 13))
-                sheet.write(celula_add_1_2_cor, str(cor_2_1))
+                sheet.write(celula_add_1_2_cor, str(result_1_2_cor))
 
-                cor_3_1 = result_1_3_cor
                 celula_add_1_3_cor = "D" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2))) + 13))
-                sheet.write(celula_add_1_3_cor, str(cor_3_1))
+                sheet.write(celula_add_1_3_cor, str(result_1_3_cor))
 
-                cor_4_1 = result_1_4_cor
                 celula_add_1_4_cor = "E" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2))) + 13))
-                sheet.write(celula_add_1_4_cor, str(cor_4_1))
+                sheet.write(celula_add_1_4_cor, str(result_1_4_cor))
 
-                cor_5_1 = result_1_5_cor
                 celula_add_1_5_cor = "F" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2))) + 13))
-                sheet.write(celula_add_1_5_cor, str(cor_5_1))
+                sheet.write(celula_add_1_5_cor, str(result_1_5_cor))
 
-                cor_6_1 = result_1_6_cor
                 celula_add_1_6_cor = "G" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2))) + 13))
-                sheet.write(celula_add_1_6_cor, str(cor_6_1))
+                sheet.write(celula_add_1_6_cor, str(result_1_6_cor))
 
-                fabricada_cor_1 = result_1_fabricada_cor
                 celula_add_1_fabricada_cor = "H" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2))) + 13))
-                sheet.write(celula_add_1_fabricada_cor, str(fabricada_cor_1))
+                sheet.write(celula_add_1_fabricada_cor, str(result_1_fabricada_cor))
 
             if int(quantidade_quadros_v) >= 2:
                 altura_3_v = altura_3.get()
@@ -7523,77 +7276,59 @@ def botao_executar():
                 celula_add_3_dim = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2) + 1)) + 1))
                 sheet.write(celula_add_3_dim, altura_3_v + " " + largura_3_v + " " + espessura_3_v)
 
-                unidades_2 = result_2_unidades
                 celula_add_2_uni = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2) + 1)) + 2))
-                sheet.write(celula_add_2_uni, str(unidades_2))
+                sheet.write(celula_add_2_uni, str(result_2_unidades))
 
-                cliche_2 = result_2_cliche
                 celula_add_2_cliche = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2) + 1)) + 3))
-                sheet.write(celula_add_2_cliche, str(cliche_2))
+                sheet.write(celula_add_2_cliche, str(result_2_cliche))
 
-                tinta_2 = result_2_tinta
                 celula_add_2_tinta = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2) + 1)) + 4))
-                sheet.write(celula_add_2_tinta, str(tinta_2))
+                sheet.write(celula_add_2_tinta, str(result_2_tinta))
 
-                n_cores_2 = result_2_n_cores
                 celula_add_2_n_cores = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2) + 1)) + 5))
-                sheet.write(celula_add_2_n_cores, str(n_cores_2))
+                sheet.write(celula_add_2_n_cores, str(result_2_n_cores))
 
-                n_caixas_2 = result_2_n_caixas
                 celula_add_2_n_caixas = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2) + 1)) + 6))
-                sheet.write(celula_add_2_n_caixas, str(n_caixas_2))
+                sheet.write(celula_add_2_n_caixas, str(result_2_n_caixas))
 
-                tipo_cliente_2 = result_2_tipo_clientes
                 celula_add_2_tipo_cliente = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2) + 1)) + 7))
-                sheet.write(celula_add_2_tipo_cliente, str(tipo_cliente_2))
+                sheet.write(celula_add_2_tipo_cliente, str(result_2_tipo_clientes))
 
-                servico_1_2 = result_2_servicos_1
                 celula_add_2_servico_1 = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2) + 1)) + 8))
-                sheet.write(celula_add_2_servico_1, str(servico_1_2))
+                sheet.write(celula_add_2_servico_1, str(result_2_servicos_1))
 
-                servico_2_2 = result_2_servicos_2
                 celula_add_2_servico_2 = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2) + 1)) + 9))
-                sheet.write(celula_add_2_servico_2, str(servico_2_2))
+                sheet.write(celula_add_2_servico_2, str(result_2_servicos_2))
 
-                caixas_2 = result_2_caixas
                 celula_add_2_caixas = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2) + 1)) + 10))
-                sheet.write(celula_add_2_caixas, str(caixas_2))
+                sheet.write(celula_add_2_caixas, str(result_2_caixas))
 
-                total_2 = result_2_total
                 celula_add_2_total = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2) + 1)) + 11))
-                sheet.write(celula_add_2_total, str(total_2))
+                sheet.write(celula_add_2_total, str(result_2_total))
 
-                s_espessura_2 = result_2_espessura
                 celula_add_2_espessura = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2) + 1)) + 12))
-                sheet.write(celula_add_2_espessura, str(s_espessura_2))
+                sheet.write(celula_add_2_espessura, str(result_2_espessura))
 
-                cor_1_2 = result_2_1_cor
                 celula_add_2_1_cor = "B" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2) + 1)) + 13))
-                sheet.write(celula_add_2_1_cor, str(cor_1_2))
+                sheet.write(celula_add_2_1_cor, str(result_2_1_cor))
 
-                cor_2_2 = result_2_2_cor
                 celula_add_2_2_cor = "C" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2) + 1)) + 13))
-                sheet.write(celula_add_2_2_cor, str(cor_2_2))
+                sheet.write(celula_add_2_2_cor, str(result_2_2_cor))
 
-                cor_3_2 = result_2_3_cor
                 celula_add_2_3_cor = "D" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2) + 1)) + 13))
-                sheet.write(celula_add_2_3_cor, str(cor_3_2))
+                sheet.write(celula_add_2_3_cor, str(result_2_3_cor))
 
-                cor_4_2 = result_2_4_cor
                 celula_add_2_4_cor = "E" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2) + 1)) + 13))
-                sheet.write(celula_add_2_4_cor, str(cor_4_2))
+                sheet.write(celula_add_2_4_cor, str(result_2_4_cor))
 
-                cor_5_2 = result_2_5_cor
                 celula_add_2_5_cor = "F" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2) + 1)) + 13))
-                sheet.write(celula_add_2_5_cor, str(cor_5_2))
+                sheet.write(celula_add_2_5_cor, str(result_2_5_cor))
 
-                cor_6_2 = result_2_6_cor
                 celula_add_2_6_cor = "G" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2) + 1)) + 13))
-                sheet.write(celula_add_2_6_cor, str(cor_6_2))
+                sheet.write(celula_add_2_6_cor, str(result_2_6_cor))
 
-                fabricada_cor_2 = result_2_fabricada_cor
                 celula_add_2_fabricada_cor = "H" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2) + 1)) + 13))
-                sheet.write(celula_add_2_fabricada_cor, str(fabricada_cor_2))
+                sheet.write(celula_add_2_fabricada_cor, str(result_2_fabricada_cor))
 
             if int(quantidade_quadros_v) >= 3:
                 altura_3_v = altura_3.get()
@@ -7605,73 +7340,56 @@ def botao_executar():
                 celula_add_3_uni = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2) + 2)) + 2))
                 sheet.write(celula_add_3_uni, str(unidades_3))
 
-                cliche_3 = result_3_cliche
                 celula_add_3_cliche = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2) + 2)) + 3))
-                sheet.write(celula_add_3_cliche, str(cliche_3))
+                sheet.write(celula_add_3_cliche, str(result_3_cliche))
 
-                tinta_3 = result_3_tinta
                 celula_add_3_tinta = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2) + 2)) + 4))
-                sheet.write(celula_add_3_tinta, str(tinta_3))
+                sheet.write(celula_add_3_tinta, str(result_3_tinta))
 
-                n_cores_3 = result_3_n_cores
                 celula_add_3_n_cores = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2) + 2)) + 5))
-                sheet.write(celula_add_3_n_cores, str(n_cores_3))
+                sheet.write(celula_add_3_n_cores, str(result_3_n_cores))
 
-                n_caixas_3 = result_3_n_caixas
                 celula_add_3_n_caixas = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2) + 2)) + 6))
-                sheet.write(celula_add_3_n_caixas, str(n_caixas_3))
+                sheet.write(celula_add_3_n_caixas, str(result_3_n_caixas))
 
-                tipo_cliente_3 = result_3_tipo_clientes
                 celula_add_3_tipo_cliente = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2) + 2)) + 7))
-                sheet.write(celula_add_3_tipo_cliente, str(tipo_cliente_3))
+                sheet.write(celula_add_3_tipo_cliente, str(result_3_tipo_clientes))
 
-                servico_1_3 = result_3_servicos_1
                 celula_add_3_servico_1 = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2) + 2)) + 8))
-                sheet.write(celula_add_3_servico_1, str(servico_1_3))
+                sheet.write(celula_add_3_servico_1, str(result_3_servicos_1))
 
-                servico_2_3 = result_3_servicos_2
                 celula_add_3_servico_2 = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2) + 2)) + 9))
-                sheet.write(celula_add_3_servico_2, str(servico_2_3))
+                sheet.write(celula_add_3_servico_2, str(result_3_servicos_2))
 
-                caixas_3 = result_3_caixas
                 celula_add_3_caixas = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2) + 2)) + 10))
-                sheet.write(celula_add_3_caixas, str(caixas_3))
+                sheet.write(celula_add_3_caixas, str(result_3_caixas))
 
-                total_3 = result_3_total
                 celula_add_3_total = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2) + 2)) + 11))
-                sheet.write(celula_add_3_total, str(total_3))
+                sheet.write(celula_add_3_total, str(result_3_total))
 
-                s_espessura_3 = result_3_espessura
                 celula_add_3_espessura = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2) + 2)) + 12))
-                sheet.write(celula_add_3_espessura, str(s_espessura_3))
+                sheet.write(celula_add_3_espessura, str(result_3_espessura))
 
-                cor_1_3 = result_3_1_cor
                 celula_add_3_1_cor = "B" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2) + 2)) + 13))
-                sheet.write(celula_add_3_1_cor, str(cor_1_3))
+                sheet.write(celula_add_3_1_cor, str(result_3_1_cor))
 
-                cor_2_3 = result_3_2_cor
                 celula_add_3_2_cor = "C" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2) + 2)) + 13))
-                sheet.write(celula_add_3_2_cor, str(cor_2_3))
+                sheet.write(celula_add_3_2_cor, str(result_3_2_cor))
 
-                cor_3_3 = result_3_3_cor
                 celula_add_3_3_cor = "D" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2) + 2)) + 13))
-                sheet.write(celula_add_3_3_cor, str(cor_3_3))
+                sheet.write(celula_add_3_3_cor, str(result_3_3_cor))
 
-                cor_4_3 = result_3_4_cor
                 celula_add_3_4_cor = "E" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2) + 2)) + 13))
-                sheet.write(celula_add_3_4_cor, str(cor_4_3))
+                sheet.write(celula_add_3_4_cor, str(result_3_4_cor))
 
-                cor_5_3 = result_3_5_cor
                 celula_add_3_5_cor = "F" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2) + 2)) + 13))
-                sheet.write(celula_add_3_5_cor, str(cor_5_3))
+                sheet.write(celula_add_3_5_cor, str(result_3_5_cor))
 
-                cor_6_3 = result_3_6_cor
                 celula_add_3_6_cor = "G" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2) + 2)) + 13))
-                sheet.write(celula_add_3_6_cor, str(cor_6_3))
+                sheet.write(celula_add_3_6_cor, str(result_3_6_cor))
 
-                fabricada_cor_3 = result_3_fabricada_cor
                 celula_add_3_fabricada_cor = "H" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2) + 2)) + 13))
-                sheet.write(celula_add_3_fabricada_cor, str(fabricada_cor_3))
+                sheet.write(celula_add_3_fabricada_cor, str(result_3_fabricada_cor))
 
             if int(quantidade_quadros_v) >= 4:
                 altura_3_v = altura_3.get()
@@ -7679,77 +7397,60 @@ def botao_executar():
                 espessura_3_v = espessura_3.get()
                 celula_add_3_dim = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2) + 3)) + 1))
                 sheet.write(celula_add_3_dim, altura_3_v + " " + largura_3_v + " " + espessura_3_v)
-                unidades_4 = result_4_unidades
+
                 celula_add_4_uni = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2) + 3)) + 2))
-                sheet.write(celula_add_4_uni, str(unidades_4))
+                sheet.write(celula_add_4_uni, str(result_4_unidades))
 
-                cliche_4 = result_4_cliche
                 celula_add_4_cliche = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2) + 3)) + 3))
-                sheet.write(celula_add_4_cliche, str(cliche_4))
+                sheet.write(celula_add_4_cliche, str(result_4_cliche))
 
-                tinta_4 = result_4_tinta
                 celula_add_4_tinta = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2) + 3)) + 4))
-                sheet.write(celula_add_4_tinta, str(tinta_4))
+                sheet.write(celula_add_4_tinta, str(result_4_tinta))
 
-                n_cores_4 = result_4_n_cores
                 celula_add_4_n_cores = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2) + 3)) + 5))
-                sheet.write(celula_add_4_n_cores, str(n_cores_4))
+                sheet.write(celula_add_4_n_cores, str(result_4_n_cores))
 
-                n_caixas_4 = result_4_n_caixas
                 celula_add_4_n_caixas = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2) + 3)) + 6))
-                sheet.write(celula_add_4_n_caixas, str(n_caixas_4))
+                sheet.write(celula_add_4_n_caixas, str(result_4_n_caixas))
 
-                tipo_cliente_4 = result_4_tipo_clientes
                 celula_add_4_tipo_cliente = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2) + 3)) + 7))
-                sheet.write(celula_add_4_tipo_cliente, str(tipo_cliente_4))
+                sheet.write(celula_add_4_tipo_cliente, str(result_4_tipo_clientes))
 
-                servico_1_4 = result_4_servicos_1
                 celula_add_4_servico_1 = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2) + 3)) + 8))
-                sheet.write(celula_add_4_servico_1, str(servico_1_4))
+                sheet.write(celula_add_4_servico_1, str(result_4_servicos_1))
 
-                servico_2_4 = result_4_servicos_2
                 celula_add_4_servico_2 = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2) + 3)) + 9))
-                sheet.write(celula_add_4_servico_2, str(servico_2_4))
+                sheet.write(celula_add_4_servico_2, str(result_4_servicos_2))
 
-                caixas_4 = result_4_caixas
                 celula_add_4_caixas = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2) + 3)) + 10))
-                sheet.write(celula_add_4_caixas, str(caixas_4))
+                sheet.write(celula_add_4_caixas, str(result_4_caixas))
 
-                total_4 = result_4_total
                 celula_add_4_total = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2) + 3)) + 11))
-                sheet.write(celula_add_4_total, str(total_4))
+                sheet.write(celula_add_4_total, str(result_4_total))
 
-                s_espessura_4 = result_4_espessura
                 celula_add_4_espessura = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2) + 3)) + 12))
-                sheet.write(celula_add_4_espessura, str(s_espessura_4))
+                sheet.write(celula_add_4_espessura, str(result_4_espessura))
 
-                cor_1_4 = result_4_1_cor
                 celula_add_4_1_cor = "B" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2) + 3)) + 13))
-                sheet.write(celula_add_4_1_cor, str(cor_1_4))
+                sheet.write(celula_add_4_1_cor, str(result_4_1_cor))
 
-                cor_2_4 = result_4_2_cor
                 celula_add_4_2_cor = "C" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2) + 3)) + 13))
-                sheet.write(celula_add_4_2_cor, str(cor_2_4))
+                sheet.write(celula_add_4_2_cor, str(result_4_2_cor))
 
-                cor_3_4 = result_4_3_cor
                 celula_add_4_3_cor = "D" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2) + 3)) + 13))
-                sheet.write(celula_add_4_3_cor, str(cor_3_4))
+                sheet.write(celula_add_4_3_cor, str(result_4_3_cor))
 
-                cor_4_4 = result_4_4_cor
                 celula_add_4_4_cor = "E" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2) + 3)) + 13))
-                sheet.write(celula_add_4_4_cor, str(cor_4_4))
+                sheet.write(celula_add_4_4_cor, str(result_4_4_cor))
 
-                cor_5_4 = result_4_5_cor
                 celula_add_4_5_cor = "F" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2) + 3)) + 13))
-                sheet.write(celula_add_4_5_cor, str(cor_5_4))
+                sheet.write(celula_add_4_5_cor, str(result_4_5_cor))
 
-                cor_6_4 = result_4_6_cor
                 celula_add_4_6_cor = "G" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2) + 3)) + 13))
-                sheet.write(celula_add_4_6_cor, str(cor_6_4))
+                sheet.write(celula_add_4_6_cor, str(result_4_6_cor))
 
-                fabricada_cor_4 = result_4_fabricada_cor
                 celula_add_4_fabricada_cor = "H" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2) + 3)) + 13))
-                sheet.write(celula_add_4_fabricada_cor, str(fabricada_cor_4))
+                sheet.write(celula_add_4_fabricada_cor, str(result_4_fabricada_cor))
 
             if int(quantidade_quadros_v) >= 5:
                 altura_3_v = altura_3.get()
@@ -7758,77 +7459,59 @@ def botao_executar():
                 celula_add_3_dim = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2) + 4)) + 1))
                 sheet.write(celula_add_3_dim, altura_3_v + " " + largura_3_v + " " + espessura_3_v)
 
-                unidades_5 = result_5_unidades
                 celula_add_5_uni = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2) + 4)) + 2))
-                sheet.write(celula_add_5_uni, str(unidades_5))
+                sheet.write(celula_add_5_uni, str(result_5_unidades))
 
-                cliche_5 = result_5_cliche
                 celula_add_5_cliche = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2) + 4)) + 3))
-                sheet.write(celula_add_5_cliche, str(cliche_5))
+                sheet.write(celula_add_5_cliche, str(result_5_cliche))
 
-                tinta_5 = result_5_tinta
                 celula_add_5_tinta = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2) + 4)) + 4))
-                sheet.write(celula_add_5_tinta, str(tinta_5))
+                sheet.write(celula_add_5_tinta, str(result_5_tinta))
 
-                n_cores_5 = result_5_n_cores
                 celula_add_5_n_cores = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2) + 4)) + 5))
-                sheet.write(celula_add_5_n_cores, str(n_cores_5))
+                sheet.write(celula_add_5_n_cores, str(result_5_n_cores))
 
-                n_caixas_5 = result_5_n_caixas
                 celula_add_5_n_caixas = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2) + 4)) + 6))
-                sheet.write(celula_add_5_n_caixas, str(n_caixas_5))
+                sheet.write(celula_add_5_n_caixas, str(result_5_n_caixas))
 
-                tipo_cliente_5 = result_5_tipo_clientes
                 celula_add_5_tipo_cliente = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2) + 4)) + 7))
-                sheet.write(celula_add_5_tipo_cliente, str(tipo_cliente_5))
+                sheet.write(celula_add_5_tipo_cliente, str(result_5_tipo_clientes))
 
-                servico_1_5 = result_5_servicos_1
                 celula_add_5_servico_1 = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2) + 4)) + 8))
-                sheet.write(celula_add_5_servico_1, str(servico_1_5))
+                sheet.write(celula_add_5_servico_1, str(result_5_servicos_1))
 
-                servico_2_5 = result_5_servicos_2
                 celula_add_5_servico_2 = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2) + 4)) + 9))
-                sheet.write(celula_add_5_servico_2, str(servico_2_5))
+                sheet.write(celula_add_5_servico_2, str(result_5_servicos_2))
 
-                caixas_5 = result_5_caixas
                 celula_add_5_caixas = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2) + 4)) + 10))
-                sheet.write(celula_add_5_caixas, str(caixas_5))
+                sheet.write(celula_add_5_caixas, str(result_5_caixas))
 
-                total_5 = result_5_total
                 celula_add_5_total = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2) + 4)) + 11))
-                sheet.write(celula_add_5_total, str(total_5))
+                sheet.write(celula_add_5_total, str(result_5_total))
 
-                s_espessura_5 = result_5_espessura
                 celula_add_5_espessura = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2) + 4)) + 12))
-                sheet.write(celula_add_5_espessura, str(s_espessura_5))
+                sheet.write(celula_add_5_espessura, str(result_5_espessura))
 
-                cor_1_5 = result_5_1_cor
                 celula_add_5_1_cor = "B" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2) + 4)) + 13))
-                sheet.write(celula_add_5_1_cor, str(cor_1_5))
+                sheet.write(celula_add_5_1_cor, str(result_5_1_cor))
 
-                cor_2_5 = result_5_2_cor
                 celula_add_5_2_cor = "C" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2) + 4)) + 13))
-                sheet.write(celula_add_5_2_cor, str(cor_2_5))
+                sheet.write(celula_add_5_2_cor, str(result_5_2_cor))
 
-                cor_3_5 = result_5_3_cor
                 celula_add_5_3_cor = "D" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2) + 4)) + 13))
-                sheet.write(celula_add_5_3_cor, str(cor_3_5))
+                sheet.write(celula_add_5_3_cor, str(result_5_3_cor))
 
-                cor_4_5 = result_5_4_cor
                 celula_add_5_4_cor = "E" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2) + 4)) + 13))
-                sheet.write(celula_add_5_4_cor, str(cor_4_5))
+                sheet.write(celula_add_5_4_cor, str(result_5_4_cor))
 
-                cor_5_5 = result_5_5_cor
                 celula_add_5_5_cor = "F" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2) + 4)) + 13))
-                sheet.write(celula_add_5_5_cor, str(cor_5_5))
+                sheet.write(celula_add_5_5_cor, str(result_5_5_cor))
 
-                cor_6_5 = result_5_6_cor
                 celula_add_5_6_cor = "G" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2) + 4)) + 13))
-                sheet.write(celula_add_5_6_cor, str(cor_6_5))
+                sheet.write(celula_add_5_6_cor, str(result_5_6_cor))
 
-                fabricada_cor_5 = result_5_fabricada_cor
                 celula_add_5_fabricada_cor = "H" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2) + 4)) + 13))
-                sheet.write(celula_add_5_fabricada_cor, str(fabricada_cor_5))
+                sheet.write(celula_add_5_fabricada_cor, str(result_5_fabricada_cor))
 
             if int(quantidade_quadros_v) >= 6:
                 altura_3_v = altura_3.get()
@@ -7836,77 +7519,60 @@ def botao_executar():
                 espessura_3_v = espessura_3.get()
                 celula_add_3_dim = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2) + 5)) + 1))
                 sheet.write(celula_add_3_dim, altura_3_v + " " + largura_3_v + " " + espessura_3_v)
-                unidades_6 = result_6_unidades
+
                 celula_add_6_uni = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2) + 5)) + 2))
-                sheet.write(celula_add_6_uni, str(unidades_6))
+                sheet.write(celula_add_6_uni, str(result_6_unidades))
 
-                cliche_6 = result_6_cliche
                 celula_add_6_cliche = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2) + 5)) + 3))
-                sheet.write(celula_add_6_cliche, str(cliche_6))
+                sheet.write(celula_add_6_cliche, str(result_6_cliche))
 
-                tinta_6 = result_6_tinta
                 celula_add_6_tinta = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2) + 5)) + 4))
-                sheet.write(celula_add_6_tinta, str(tinta_6))
+                sheet.write(celula_add_6_tinta, str(result_6_tinta))
 
-                n_cores_6 = result_6_n_cores
                 celula_add_6_n_cores = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2) + 5)) + 5))
-                sheet.write(celula_add_6_n_cores, str(n_cores_6))
+                sheet.write(celula_add_6_n_cores, str(result_6_n_cores))
 
-                n_caixas_6 = result_6_n_caixas
                 celula_add_6_n_caixas = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2) + 5)) + 6))
-                sheet.write(celula_add_6_n_caixas, str(n_caixas_6))
+                sheet.write(celula_add_6_n_caixas, str(result_6_n_caixas))
 
-                tipo_cliente_6 = result_6_tipo_clientes
                 celula_add_6_tipo_cliente = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2) + 5)) + 7))
-                sheet.write(celula_add_6_tipo_cliente, str(tipo_cliente_6))
+                sheet.write(celula_add_6_tipo_cliente, str(result_6_tipo_clientes))
 
-                servico_1_6 = result_6_servicos_1
                 celula_add_6_servico_1 = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2) + 5)) + 8))
-                sheet.write(celula_add_6_servico_1, str(servico_1_6))
+                sheet.write(celula_add_6_servico_1, str(result_6_servicos_1))
 
-                servico_2_6 = result_6_servicos_2
                 celula_add_6_servico_2 = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2) + 5)) + 9))
-                sheet.write(celula_add_6_servico_2, str(servico_2_6))
+                sheet.write(celula_add_6_servico_2, str(result_6_servicos_2))
 
-                caixas_6 = result_6_caixas
                 celula_add_6_caixas = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2) + 5)) + 10))
-                sheet.write(celula_add_6_caixas, str(caixas_6))
+                sheet.write(celula_add_6_caixas, str(result_6_caixas))
 
-                total_6 = result_6_total
                 celula_add_6_total = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2) + 5)) + 11))
-                sheet.write(celula_add_6_total, str(total_6))
+                sheet.write(celula_add_6_total, str(result_6_total))
 
-                s_espessura_6 = result_6_espessura
                 celula_add_6_espessura = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2) + 5)) + 12))
-                sheet.write(celula_add_6_espessura, str(s_espessura_6))
+                sheet.write(celula_add_6_espessura, str(result_6_espessura))
 
-                cor_1_6 = result_6_1_cor
                 celula_add_6_1_cor = "B" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2) + 5)) + 13))
-                sheet.write(celula_add_6_1_cor, str(cor_1_6))
+                sheet.write(celula_add_6_1_cor, str(result_6_1_cor))
 
-                cor_2_6 = result_6_2_cor
                 celula_add_6_2_cor = "C" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2) + 5)) + 13))
-                sheet.write(celula_add_6_2_cor, str(cor_2_6))
+                sheet.write(celula_add_6_2_cor, str(result_6_2_cor))
 
-                cor_3_6 = result_6_3_cor
                 celula_add_6_3_cor = "D" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2) + 5)) + 13))
-                sheet.write(celula_add_6_3_cor, str(cor_3_6))
+                sheet.write(celula_add_6_3_cor, str(result_6_3_cor))
 
-                cor_4_6 = result_6_4_cor
                 celula_add_6_4_cor = "E" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2) + 5)) + 13))
-                sheet.write(celula_add_6_4_cor, str(cor_4_6))
+                sheet.write(celula_add_6_4_cor, str(result_6_4_cor))
 
-                cor_5_6 = result_6_5_cor
                 celula_add_6_5_cor = "F" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2) + 5)) + 13))
-                sheet.write(celula_add_6_5_cor, str(cor_5_6))
+                sheet.write(celula_add_6_5_cor, str(result_6_5_cor))
 
-                cor_6_6 = result_6_6_cor
                 celula_add_6_6_cor = "G" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2) + 5)) + 13))
-                sheet.write(celula_add_6_6_cor, str(cor_6_6))
+                sheet.write(celula_add_6_6_cor, str(result_6_6_cor))
 
-                fabricada_cor_6 = result_6_fabricada_cor
                 celula_add_6_fabricada_cor = "H" + str(((21 * (numero_quadros + (quantidade_quadros_v * 2) + 5)) + 13))
-                sheet.write(celula_add_6_fabricada_cor, str(fabricada_cor_6))
+                sheet.write(celula_add_6_fabricada_cor, str(result_6_fabricada_cor))
 
         altura_4_v = altura_4.get()
         if altura_4_v != "":
@@ -7918,77 +7584,59 @@ def botao_executar():
                 celula_add_4_dim = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3))) + 1))
                 sheet.write(celula_add_4_dim, altura_4_v + " " + largura_4_v + " " + espessura_4_v)
 
-                unidades_1 = result_1_unidades
                 celula_add_1_uni = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3))) + 2))
-                sheet.write(celula_add_1_uni, str(unidades_1))
+                sheet.write(celula_add_1_uni, str(result_1_unidades))
 
-                cliche_1 = result_1_cliche
                 celula_add_1_cliche = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3))) + 3))
-                sheet.write(celula_add_1_cliche, str(cliche_1))
+                sheet.write(celula_add_1_cliche, str(result_1_cliche))
 
-                tinta_1 = result_1_tinta
                 celula_add_1_tinta = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3))) + 4))
-                sheet.write(celula_add_1_tinta, str(tinta_1))
+                sheet.write(celula_add_1_tinta, str(result_1_tinta))
 
-                n_cores_1 = result_1_n_cores
                 celula_add_1_n_cores = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3))) + 5))
-                sheet.write(celula_add_1_n_cores, str(n_cores_1))
+                sheet.write(celula_add_1_n_cores, str(result_1_n_cores))
 
-                n_caixas_1 = result_1_n_caixas
                 celula_add_1_n_caixas = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3))) + 6))
-                sheet.write(celula_add_1_n_caixas, str(n_caixas_1))
+                sheet.write(celula_add_1_n_caixas, str(result_1_n_caixas))
 
-                tipo_cliente_1 = result_1_tipo_clientes
                 celula_add_1_tipo_cliente = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3))) + 7))
-                sheet.write(celula_add_1_tipo_cliente, str(tipo_cliente_1))
+                sheet.write(celula_add_1_tipo_cliente, str(result_1_tipo_clientes))
 
-                servico_1_1 = result_1_servicos_1
                 celula_add_1_servico_1 = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3))) + 8))
-                sheet.write(celula_add_1_servico_1, str(servico_1_1))
+                sheet.write(celula_add_1_servico_1, str(result_1_servicos_1))
 
-                servico_2_1 = result_1_servicos_2
                 celula_add_1_servico_2 = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3))) + 9))
-                sheet.write(celula_add_1_servico_2, str(servico_2_1))
+                sheet.write(celula_add_1_servico_2, str(result_1_servicos_2))
 
-                caixas_1 = result_1_caixas
                 celula_add_1_caixas = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3))) + 10))
-                sheet.write(celula_add_1_caixas, str(caixas_1))
+                sheet.write(celula_add_1_caixas, str(result_1_caixas))
 
-                total_1 = result_1_total
                 celula_add_1_total = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3))) + 11))
-                sheet.write(celula_add_1_total, str(total_1))
+                sheet.write(celula_add_1_total, str(result_1_total))
 
-                s_espessura_1 = result_1_espessura
                 celula_add_1_espessura = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3))) + 12))
-                sheet.write(celula_add_1_espessura, str(s_espessura_1))
+                sheet.write(celula_add_1_espessura, str(result_1_espessura))
 
-                cor_1_1 = result_1_1_cor
                 celula_add_1_1_cor = "B" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3))) + 13))
-                sheet.write(celula_add_1_1_cor, str(cor_1_1))
+                sheet.write(celula_add_1_1_cor, str(result_1_1_cor))
 
-                cor_2_1 = result_1_2_cor
                 celula_add_1_2_cor = "C" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3))) + 13))
-                sheet.write(celula_add_1_2_cor, str(cor_2_1))
+                sheet.write(celula_add_1_2_cor, str(result_1_2_cor))
 
-                cor_3_1 = result_1_3_cor
                 celula_add_1_3_cor = "D" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3))) + 13))
-                sheet.write(celula_add_1_3_cor, str(cor_3_1))
+                sheet.write(celula_add_1_3_cor, str(result_1_3_cor))
 
-                cor_4_1 = result_1_4_cor
                 celula_add_1_4_cor = "E" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3))) + 13))
-                sheet.write(celula_add_1_4_cor, str(cor_4_1))
+                sheet.write(celula_add_1_4_cor, str(result_1_4_cor))
 
-                cor_5_1 = result_1_5_cor
                 celula_add_1_5_cor = "F" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3))) + 13))
-                sheet.write(celula_add_1_5_cor, str(cor_5_1))
+                sheet.write(celula_add_1_5_cor, str(result_1_5_cor))
 
-                cor_6_1 = result_1_6_cor
                 celula_add_1_6_cor = "G" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3))) + 13))
-                sheet.write(celula_add_1_6_cor, str(cor_6_1))
+                sheet.write(celula_add_1_6_cor, str(result_1_6_cor))
 
-                fabricada_cor_1 = result_1_fabricada_cor
                 celula_add_1_fabricada_cor = "H" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3))) + 13))
-                sheet.write(celula_add_1_fabricada_cor, str(fabricada_cor_1))
+                sheet.write(celula_add_1_fabricada_cor, str(result_1_fabricada_cor))
 
             if int(quantidade_quadros_v) >= 2:
                 altura_4_v = altura_4.get()
@@ -7997,77 +7645,59 @@ def botao_executar():
                 celula_add_4_dim = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3) + 1)) + 1))
                 sheet.write(celula_add_4_dim, altura_4_v + " " + largura_4_v + " " + espessura_4_v)
 
-                unidades_2 = result_2_unidades
                 celula_add_2_uni = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3) + 1)) + 2))
-                sheet.write(celula_add_2_uni, str(unidades_2))
+                sheet.write(celula_add_2_uni, str(result_2_unidades))
 
-                cliche_2 = result_2_cliche
                 celula_add_2_cliche = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3) + 1)) + 3))
-                sheet.write(celula_add_2_cliche, str(cliche_2))
+                sheet.write(celula_add_2_cliche, str(result_2_cliche))
 
-                tinta_2 = result_2_tinta
                 celula_add_2_tinta = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3) + 1)) + 4))
-                sheet.write(celula_add_2_tinta, str(tinta_2))
+                sheet.write(celula_add_2_tinta, str(result_2_tinta))
 
-                n_cores_2 = result_2_n_cores
                 celula_add_2_n_cores = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3) + 1)) + 5))
-                sheet.write(celula_add_2_n_cores, str(n_cores_2))
+                sheet.write(celula_add_2_n_cores, str(result_2_n_cores))
 
-                n_caixas_2 = result_2_n_caixas
                 celula_add_2_n_caixas = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3) + 1)) + 6))
-                sheet.write(celula_add_2_n_caixas, str(n_caixas_2))
+                sheet.write(celula_add_2_n_caixas, str(result_2_n_caixas))
 
-                tipo_cliente_2 = result_2_tipo_clientes
                 celula_add_2_tipo_cliente = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3) + 1)) + 7))
-                sheet.write(celula_add_2_tipo_cliente, str(tipo_cliente_2))
+                sheet.write(celula_add_2_tipo_cliente, str(result_2_tipo_clientes))
 
-                servico_1_2 = result_2_servicos_1
                 celula_add_2_servico_1 = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3) + 1)) + 8))
-                sheet.write(celula_add_2_servico_1, str(servico_1_2))
+                sheet.write(celula_add_2_servico_1, str(result_2_servicos_1))
 
-                servico_2_2 = result_2_servicos_2
                 celula_add_2_servico_2 = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3) + 1)) + 9))
-                sheet.write(celula_add_2_servico_2, str(servico_2_2))
+                sheet.write(celula_add_2_servico_2, str(result_2_servicos_2))
 
-                caixas_2 = result_2_caixas
                 celula_add_2_caixas = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3) + 1)) + 10))
-                sheet.write(celula_add_2_caixas, str(caixas_2))
+                sheet.write(celula_add_2_caixas, str(result_2_caixas))
 
-                total_2 = result_2_total
                 celula_add_2_total = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3) + 1)) + 11))
-                sheet.write(celula_add_2_total, str(total_2))
+                sheet.write(celula_add_2_total, str(result_2_total))
 
-                s_espessura_2 = result_2_espessura
                 celula_add_2_espessura = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3) + 1)) + 12))
-                sheet.write(celula_add_2_espessura, str(s_espessura_2))
+                sheet.write(celula_add_2_espessura, str(result_2_espessura))
 
-                cor_1_2 = result_2_1_cor
                 celula_add_2_1_cor = "B" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3) + 1)) + 13))
-                sheet.write(celula_add_2_1_cor, str(cor_1_2))
+                sheet.write(celula_add_2_1_cor, str(result_2_1_cor))
 
-                cor_2_2 = result_2_2_cor
                 celula_add_2_2_cor = "C" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3) + 1)) + 13))
-                sheet.write(celula_add_2_2_cor, str(cor_2_2))
+                sheet.write(celula_add_2_2_cor, str(result_2_2_cor))
 
-                cor_3_2 = result_2_3_cor
                 celula_add_2_3_cor = "D" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3) + 1)) + 13))
-                sheet.write(celula_add_2_3_cor, str(cor_3_2))
+                sheet.write(celula_add_2_3_cor, str(result_2_3_cor))
 
-                cor_4_2 = result_2_4_cor
                 celula_add_2_4_cor = "E" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3) + 1)) + 13))
-                sheet.write(celula_add_2_4_cor, str(cor_4_2))
+                sheet.write(celula_add_2_4_cor, str(result_2_4_cor))
 
-                cor_5_2 = result_2_5_cor
                 celula_add_2_5_cor = "F" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3) + 1)) + 13))
-                sheet.write(celula_add_2_5_cor, str(cor_5_2))
+                sheet.write(celula_add_2_5_cor, str(result_2_5_cor))
 
-                cor_6_2 = result_2_6_cor
                 celula_add_2_6_cor = "G" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3) + 1)) + 13))
-                sheet.write(celula_add_2_6_cor, str(cor_6_2))
+                sheet.write(celula_add_2_6_cor, str(result_2_6_cor))
 
-                fabricada_cor_2 = result_2_fabricada_cor
                 celula_add_2_fabricada_cor = "H" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3) + 1)) + 13))
-                sheet.write(celula_add_2_fabricada_cor, str(fabricada_cor_2))
+                sheet.write(celula_add_2_fabricada_cor, str(result_2_fabricada_cor))
 
             if int(quantidade_quadros_v) >= 3:
                 altura_4_v = altura_4.get()
@@ -8079,73 +7709,56 @@ def botao_executar():
                 celula_add_3_uni = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3) + 2)) + 2))
                 sheet.write(celula_add_3_uni, str(unidades_3))
 
-                cliche_3 = result_3_cliche
                 celula_add_3_cliche = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3) + 2)) + 3))
-                sheet.write(celula_add_3_cliche, str(cliche_3))
+                sheet.write(celula_add_3_cliche, str(result_3_cliche))
 
-                tinta_3 = result_3_tinta
                 celula_add_3_tinta = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3) + 2)) + 4))
-                sheet.write(celula_add_3_tinta, str(tinta_3))
+                sheet.write(celula_add_3_tinta, str(result_3_tinta))
 
-                n_cores_3 = result_3_n_cores
                 celula_add_3_n_cores = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3) + 2)) + 5))
-                sheet.write(celula_add_3_n_cores, str(n_cores_3))
+                sheet.write(celula_add_3_n_cores, str(result_3_n_cores))
 
-                n_caixas_3 = result_3_n_caixas
                 celula_add_3_n_caixas = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3) + 2)) + 6))
-                sheet.write(celula_add_3_n_caixas, str(n_caixas_3))
+                sheet.write(celula_add_3_n_caixas, str(result_3_n_caixas))
 
-                tipo_cliente_3 = result_3_tipo_clientes
                 celula_add_3_tipo_cliente = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3) + 2)) + 7))
-                sheet.write(celula_add_3_tipo_cliente, str(tipo_cliente_3))
+                sheet.write(celula_add_3_tipo_cliente, str(result_3_tipo_clientes))
 
-                servico_1_3 = result_3_servicos_1
                 celula_add_3_servico_1 = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3) + 2)) + 8))
-                sheet.write(celula_add_3_servico_1, str(servico_1_3))
+                sheet.write(celula_add_3_servico_1, str(result_3_servicos_1))
 
-                servico_2_3 = result_3_servicos_2
                 celula_add_3_servico_2 = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3) + 2)) + 9))
-                sheet.write(celula_add_3_servico_2, str(servico_2_3))
+                sheet.write(celula_add_3_servico_2, str(result_3_servicos_2))
 
-                caixas_3 = result_3_caixas
                 celula_add_3_caixas = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3) + 2)) + 10))
-                sheet.write(celula_add_3_caixas, str(caixas_3))
+                sheet.write(celula_add_3_caixas, str(result_3_caixas))
 
-                total_3 = result_3_total
                 celula_add_3_total = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3) + 2)) + 11))
-                sheet.write(celula_add_3_total, str(total_3))
+                sheet.write(celula_add_3_total, str(result_3_total))
 
-                s_espessura_3 = result_3_espessura
                 celula_add_3_espessura = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3) + 2)) + 12))
-                sheet.write(celula_add_3_espessura, str(s_espessura_3))
+                sheet.write(celula_add_3_espessura, str(result_3_espessura))
 
-                cor_1_3 = result_3_1_cor
                 celula_add_3_1_cor = "B" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3) + 2)) + 13))
-                sheet.write(celula_add_3_1_cor, str(cor_1_3))
+                sheet.write(celula_add_3_1_cor, str(result_3_1_cor))
 
-                cor_2_3 = result_3_2_cor
                 celula_add_3_2_cor = "C" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3) + 2)) + 13))
-                sheet.write(celula_add_3_2_cor, str(cor_2_3))
+                sheet.write(celula_add_3_2_cor, str(result_3_2_cor))
 
-                cor_3_3 = result_3_3_cor
                 celula_add_3_3_cor = "D" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3) + 2)) + 13))
-                sheet.write(celula_add_3_3_cor, str(cor_3_3))
+                sheet.write(celula_add_3_3_cor, str(result_3_3_cor))
 
-                cor_4_3 = result_3_4_cor
                 celula_add_3_4_cor = "E" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3) + 2)) + 13))
-                sheet.write(celula_add_3_4_cor, str(cor_4_3))
+                sheet.write(celula_add_3_4_cor, str(result_3_4_cor))
 
-                cor_5_3 = result_3_5_cor
                 celula_add_3_5_cor = "F" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3) + 2)) + 13))
-                sheet.write(celula_add_3_5_cor, str(cor_5_3))
+                sheet.write(celula_add_3_5_cor, str(result_3_5_cor))
 
-                cor_6_3 = result_3_6_cor
                 celula_add_3_6_cor = "G" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3) + 2)) + 13))
-                sheet.write(celula_add_3_6_cor, str(cor_6_3))
+                sheet.write(celula_add_3_6_cor, str(result_3_6_cor))
 
-                fabricada_cor_3 = result_3_fabricada_cor
                 celula_add_3_fabricada_cor = "H" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3) + 2)) + 13))
-                sheet.write(celula_add_3_fabricada_cor, str(fabricada_cor_3))
+                sheet.write(celula_add_3_fabricada_cor, str(result_3_fabricada_cor))
 
             if int(quantidade_quadros_v) >= 4:
                 altura_4_v = altura_4.get()
@@ -8153,77 +7766,60 @@ def botao_executar():
                 espessura_4_v = espessura_4.get()
                 celula_add_4_dim = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3) + 3)) + 1))
                 sheet.write(celula_add_4_dim, altura_4_v + " " + largura_4_v + " " + espessura_4_v)
-                unidades_4 = result_4_unidades
+
                 celula_add_4_uni = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3) + 3)) + 2))
-                sheet.write(celula_add_4_uni, str(unidades_4))
+                sheet.write(celula_add_4_uni, str(result_4_unidades))
 
-                cliche_4 = result_4_cliche
                 celula_add_4_cliche = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3) + 3)) + 3))
-                sheet.write(celula_add_4_cliche, str(cliche_4))
+                sheet.write(celula_add_4_cliche, str(result_4_cliche))
 
-                tinta_4 = result_4_tinta
                 celula_add_4_tinta = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3) + 3)) + 4))
-                sheet.write(celula_add_4_tinta, str(tinta_4))
+                sheet.write(celula_add_4_tinta, str(result_4_tinta))
 
-                n_cores_4 = result_4_n_cores
                 celula_add_4_n_cores = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3) + 3)) + 5))
-                sheet.write(celula_add_4_n_cores, str(n_cores_4))
+                sheet.write(celula_add_4_n_cores, str(result_4_n_cores))
 
-                n_caixas_4 = result_4_n_caixas
                 celula_add_4_n_caixas = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3) + 3)) + 6))
-                sheet.write(celula_add_4_n_caixas, str(n_caixas_4))
+                sheet.write(celula_add_4_n_caixas, str(result_4_n_caixas))
 
-                tipo_cliente_4 = result_4_tipo_clientes
                 celula_add_4_tipo_cliente = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3) + 3)) + 7))
-                sheet.write(celula_add_4_tipo_cliente, str(tipo_cliente_4))
+                sheet.write(celula_add_4_tipo_cliente, str(result_4_tipo_clientes))
 
-                servico_1_4 = result_4_servicos_1
                 celula_add_4_servico_1 = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3) + 3)) + 8))
-                sheet.write(celula_add_4_servico_1, str(servico_1_4))
+                sheet.write(celula_add_4_servico_1, str(result_4_servicos_1))
 
-                servico_2_4 = result_4_servicos_2
                 celula_add_4_servico_2 = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3) + 3)) + 9))
-                sheet.write(celula_add_4_servico_2, str(servico_2_4))
+                sheet.write(celula_add_4_servico_2, str(result_4_servicos_2))
 
-                caixas_4 = result_4_caixas
                 celula_add_4_caixas = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3) + 3)) + 10))
-                sheet.write(celula_add_4_caixas, str(caixas_4))
+                sheet.write(celula_add_4_caixas, str(result_4_caixas))
 
-                total_4 = result_4_total
                 celula_add_4_total = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3) + 3)) + 11))
-                sheet.write(celula_add_4_total, str(total_4))
+                sheet.write(celula_add_4_total, str(result_4_total))
 
-                s_espessura_4 = result_4_espessura
                 celula_add_4_espessura = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3) + 3)) + 12))
-                sheet.write(celula_add_4_espessura, str(s_espessura_4))
+                sheet.write(celula_add_4_espessura, str(result_4_espessura))
 
-                cor_1_4 = result_4_1_cor
                 celula_add_4_1_cor = "B" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3) + 3)) + 13))
-                sheet.write(celula_add_4_1_cor, str(cor_1_4))
+                sheet.write(celula_add_4_1_cor, str(result_4_1_cor))
 
-                cor_2_4 = result_4_2_cor
                 celula_add_4_2_cor = "C" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3) + 3)) + 13))
-                sheet.write(celula_add_4_2_cor, str(cor_2_4))
+                sheet.write(celula_add_4_2_cor, str(result_4_2_cor))
 
-                cor_3_4 = result_4_3_cor
                 celula_add_4_3_cor = "D" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3) + 3)) + 13))
-                sheet.write(celula_add_4_3_cor, str(cor_3_4))
+                sheet.write(celula_add_4_3_cor, str(result_4_3_cor))
 
-                cor_4_4 = result_4_4_cor
                 celula_add_4_4_cor = "E" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3) + 3)) + 13))
-                sheet.write(celula_add_4_4_cor, str(cor_4_4))
+                sheet.write(celula_add_4_4_cor, str(result_4_4_cor))
 
-                cor_5_4 = result_4_5_cor
                 celula_add_4_5_cor = "F" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3) + 3)) + 13))
-                sheet.write(celula_add_4_5_cor, str(cor_5_4))
+                sheet.write(celula_add_4_5_cor, str(result_4_5_cor))
 
-                cor_6_4 = result_4_6_cor
                 celula_add_4_6_cor = "G" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3) + 3)) + 13))
-                sheet.write(celula_add_4_6_cor, str(cor_6_4))
+                sheet.write(celula_add_4_6_cor, str(result_4_6_cor))
 
-                fabricada_cor_4 = result_4_fabricada_cor
                 celula_add_4_fabricada_cor = "H" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3) + 3)) + 13))
-                sheet.write(celula_add_4_fabricada_cor, str(fabricada_cor_4))
+                sheet.write(celula_add_4_fabricada_cor, str(result_4_fabricada_cor))
 
             if int(quantidade_quadros_v) >= 5:
                 altura_4_v = altura_4.get()
@@ -8232,77 +7828,59 @@ def botao_executar():
                 celula_add_4_dim = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3) + 4)) + 1))
                 sheet.write(celula_add_4_dim, altura_4_v + " " + largura_4_v + " " + espessura_4_v)
 
-                unidades_5 = result_5_unidades
                 celula_add_5_uni = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3) + 4)) + 2))
-                sheet.write(celula_add_5_uni, str(unidades_5))
+                sheet.write(celula_add_5_uni, str(result_5_unidades))
 
-                cliche_5 = result_5_cliche
                 celula_add_5_cliche = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3) + 4)) + 3))
-                sheet.write(celula_add_5_cliche, str(cliche_5))
+                sheet.write(celula_add_5_cliche, str(result_5_cliche))
 
-                tinta_5 = result_5_tinta
                 celula_add_5_tinta = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3) + 4)) + 4))
-                sheet.write(celula_add_5_tinta, str(tinta_5))
+                sheet.write(celula_add_5_tinta, str(result_5_tinta))
 
-                n_cores_5 = result_5_n_cores
                 celula_add_5_n_cores = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3) + 4)) + 5))
-                sheet.write(celula_add_5_n_cores, str(n_cores_5))
+                sheet.write(celula_add_5_n_cores, str(result_5_n_cores))
 
-                n_caixas_5 = result_5_n_caixas
                 celula_add_5_n_caixas = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3) + 4)) + 6))
-                sheet.write(celula_add_5_n_caixas, str(n_caixas_5))
+                sheet.write(celula_add_5_n_caixas, str(result_5_n_caixas))
 
-                tipo_cliente_5 = result_5_tipo_clientes
                 celula_add_5_tipo_cliente = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3) + 4)) + 7))
-                sheet.write(celula_add_5_tipo_cliente, str(tipo_cliente_5))
+                sheet.write(celula_add_5_tipo_cliente, str(result_5_tipo_clientes))
 
-                servico_1_5 = result_5_servicos_1
                 celula_add_5_servico_1 = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3) + 4)) + 8))
-                sheet.write(celula_add_5_servico_1, str(servico_1_5))
+                sheet.write(celula_add_5_servico_1, str(result_5_servicos_1))
 
-                servico_2_5 = result_5_servicos_2
                 celula_add_5_servico_2 = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3) + 4)) + 9))
-                sheet.write(celula_add_5_servico_2, str(servico_2_5))
+                sheet.write(celula_add_5_servico_2, str(result_5_servicos_2))
 
-                caixas_5 = result_5_caixas
                 celula_add_5_caixas = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3) + 4)) + 10))
-                sheet.write(celula_add_5_caixas, str(caixas_5))
+                sheet.write(celula_add_5_caixas, str(result_5_caixas))
 
-                total_5 = result_5_total
                 celula_add_5_total = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3) + 4)) + 11))
-                sheet.write(celula_add_5_total, str(total_5))
+                sheet.write(celula_add_5_total, str(result_5_total))
 
-                s_espessura_5 = result_5_espessura
                 celula_add_5_espessura = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3) + 4)) + 12))
-                sheet.write(celula_add_5_espessura, str(s_espessura_5))
+                sheet.write(celula_add_5_espessura, str(result_5_espessura))
 
-                cor_1_5 = result_5_1_cor
                 celula_add_5_1_cor = "B" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3) + 4)) + 13))
-                sheet.write(celula_add_5_1_cor, str(cor_1_5))
+                sheet.write(celula_add_5_1_cor, str(result_5_1_cor))
 
-                cor_2_5 = result_5_2_cor
                 celula_add_5_2_cor = "C" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3) + 4)) + 13))
-                sheet.write(celula_add_5_2_cor, str(cor_2_5))
+                sheet.write(celula_add_5_2_cor, str(result_5_2_cor))
 
-                cor_3_5 = result_5_3_cor
                 celula_add_5_3_cor = "D" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3) + 4)) + 13))
-                sheet.write(celula_add_5_3_cor, str(cor_3_5))
+                sheet.write(celula_add_5_3_cor, str(result_5_3_cor))
 
-                cor_4_5 = result_5_4_cor
                 celula_add_5_4_cor = "E" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3) + 4)) + 13))
-                sheet.write(celula_add_5_4_cor, str(cor_4_5))
+                sheet.write(celula_add_5_4_cor, str(result_5_4_cor))
 
-                cor_5_5 = result_5_5_cor
                 celula_add_5_5_cor = "F" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3) + 4)) + 13))
-                sheet.write(celula_add_5_5_cor, str(cor_5_5))
+                sheet.write(celula_add_5_5_cor, str(result_5_5_cor))
 
-                cor_6_5 = result_5_6_cor
                 celula_add_5_6_cor = "G" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3) + 4)) + 13))
-                sheet.write(celula_add_5_6_cor, str(cor_6_5))
+                sheet.write(celula_add_5_6_cor, str(result_5_6_cor))
 
-                fabricada_cor_5 = result_5_fabricada_cor
                 celula_add_5_fabricada_cor = "H" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3) + 4)) + 13))
-                sheet.write(celula_add_5_fabricada_cor, str(fabricada_cor_5))
+                sheet.write(celula_add_5_fabricada_cor, str(result_5_fabricada_cor))
 
             if int(quantidade_quadros_v) >= 6:
                 altura_4_v = altura_4.get()
@@ -8310,77 +7888,60 @@ def botao_executar():
                 espessura_4_v = espessura_4.get()
                 celula_add_4_dim = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3) + 5)) + 1))
                 sheet.write(celula_add_4_dim, altura_4_v + " " + largura_4_v + " " + espessura_4_v)
-                unidades_6 = result_6_unidades
+
                 celula_add_6_uni = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3) + 5)) + 2))
-                sheet.write(celula_add_6_uni, str(unidades_6))
+                sheet.write(celula_add_6_uni, str(result_6_unidades))
 
-                cliche_6 = result_6_cliche
                 celula_add_6_cliche = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3) + 5)) + 3))
-                sheet.write(celula_add_6_cliche, str(cliche_6))
+                sheet.write(celula_add_6_cliche, str(result_6_cliche))
 
-                tinta_6 = result_6_tinta
                 celula_add_6_tinta = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3) + 5)) + 4))
-                sheet.write(celula_add_6_tinta, str(tinta_6))
+                sheet.write(celula_add_6_tinta, str(result_6_tinta))
 
-                n_cores_6 = result_6_n_cores
                 celula_add_6_n_cores = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3) + 5)) + 5))
-                sheet.write(celula_add_6_n_cores, str(n_cores_6))
+                sheet.write(celula_add_6_n_cores, str(result_6_n_cores))
 
-                n_caixas_6 = result_6_n_caixas
                 celula_add_6_n_caixas = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3) + 5)) + 6))
-                sheet.write(celula_add_6_n_caixas, str(n_caixas_6))
+                sheet.write(celula_add_6_n_caixas, str(result_6_n_caixas))
 
-                tipo_cliente_6 = result_6_tipo_clientes
                 celula_add_6_tipo_cliente = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3) + 5)) + 7))
-                sheet.write(celula_add_6_tipo_cliente, str(tipo_cliente_6))
+                sheet.write(celula_add_6_tipo_cliente, str(result_6_tipo_clientes))
 
-                servico_1_6 = result_6_servicos_1
                 celula_add_6_servico_1 = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3) + 5)) + 8))
-                sheet.write(celula_add_6_servico_1, str(servico_1_6))
+                sheet.write(celula_add_6_servico_1, str(result_6_servicos_1))
 
-                servico_2_6 = result_6_servicos_2
                 celula_add_6_servico_2 = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3) + 5)) + 9))
-                sheet.write(celula_add_6_servico_2, str(servico_2_6))
+                sheet.write(celula_add_6_servico_2, str(result_6_servicos_2))
 
-                caixas_6 = result_6_caixas
                 celula_add_6_caixas = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3) + 5)) + 10))
-                sheet.write(celula_add_6_caixas, str(caixas_6))
+                sheet.write(celula_add_6_caixas, str(result_6_caixas))
 
-                total_6 = result_6_total
                 celula_add_6_total = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3) + 5)) + 11))
-                sheet.write(celula_add_6_total, str(total_6))
+                sheet.write(celula_add_6_total, str(result_6_total))
 
-                s_espessura_6 = result_6_espessura
                 celula_add_6_espessura = "A" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3) + 5)) + 12))
-                sheet.write(celula_add_6_espessura, str(s_espessura_6))
+                sheet.write(celula_add_6_espessura, str(result_6_espessura))
 
-                cor_1_6 = result_6_1_cor
                 celula_add_6_1_cor = "B" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3) + 5)) + 13))
-                sheet.write(celula_add_6_1_cor, str(cor_1_6))
+                sheet.write(celula_add_6_1_cor, str(result_6_1_cor))
 
-                cor_2_6 = result_6_2_cor
                 celula_add_6_2_cor = "C" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3) + 5)) + 13))
-                sheet.write(celula_add_6_2_cor, str(cor_2_6))
+                sheet.write(celula_add_6_2_cor, str(result_6_2_cor))
 
-                cor_3_6 = result_6_3_cor
                 celula_add_6_3_cor = "D" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3) + 5)) + 13))
-                sheet.write(celula_add_6_3_cor, str(cor_3_6))
+                sheet.write(celula_add_6_3_cor, str(result_6_3_cor))
 
-                cor_4_6 = result_6_4_cor
                 celula_add_6_4_cor = "E" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3) + 5)) + 13))
-                sheet.write(celula_add_6_4_cor, str(cor_4_6))
+                sheet.write(celula_add_6_4_cor, str(result_6_4_cor))
 
-                cor_5_6 = result_6_5_cor
                 celula_add_6_5_cor = "F" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3) + 5)) + 13))
-                sheet.write(celula_add_6_5_cor, str(cor_5_6))
+                sheet.write(celula_add_6_5_cor, str(result_6_5_cor))
 
-                cor_6_6 = result_6_6_cor
                 celula_add_6_6_cor = "G" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3) + 5)) + 13))
-                sheet.write(celula_add_6_6_cor, str(cor_6_6))
+                sheet.write(celula_add_6_6_cor, str(result_6_6_cor))
 
-                fabricada_cor_6 = result_6_fabricada_cor
                 celula_add_6_fabricada_cor = "H" + str(((21 * (numero_quadros + (quantidade_quadros_v * 3) + 5)) + 13))
-                sheet.write(celula_add_6_fabricada_cor, str(fabricada_cor_6))
+                sheet.write(celula_add_6_fabricada_cor, str(result_6_fabricada_cor))
 
 
         else:
@@ -11599,7 +11160,7 @@ def botao_executar():
         workbook.close()
         x = str(Path('C:', '/', 'Users'))
         y = str(Path(gt.getuser(), '/', gt.getuser()))
-        z = "\Desktop\AUTO_ORC\Caracteristricas_ORC.xlsx"
+        z = "\Desktop\AUTO_ORC\App ORC\Caracteristricas_ORC.xlsx"
         a = x + y + z
         absolutepath = Path(a).resolve()
         os.system(f'start excel.exe "{absolutepath}"')
@@ -11912,27 +11473,35 @@ menu_1.title('Nome do documento')
 # Cor de fundo
 menu_1.configure(background='#f0f8ff')
 # Dimensoes da tela
-menu_1.geometry("680x800")
+menu_1.geometry("680x1030")
 # Titulo da tela
 texto_titulo = Label(menu_1, text='Documento(.pdf)', background='#FF3030')
-texto_titulo.place(x=200, y=5, width=240, height=50)
+texto_titulo.place(x=220, y=5, width=240, height=50)
 texto_titulo.configure(font=("Courier", 15, "italic", "bold"))
 # Arrastar e largar documento
 entry_sv = StringVar()
 entry_sv.set('Largar PDF aqui...')
 entry = Entry(menu_1, textvar=entry_sv, width=80, justify=CENTER, fg="red", font=("Courier", 26, "italic", "bold"))
-entry.place(x=120, y=90, width=400, height=180)
+entry.place(x=140, y=90, width=400, height=180)
 entry.drop_target_register(DND_FILES)
 entry.dnd_bind('<<Drop>>', drop)
 
 # Titulo Alterar todos
 texto_titulo = Label(menu_1, text='Alterar Todos', background='#FF3030')
-texto_titulo.place(x=5, y=400, width=670, height=30)
+texto_titulo.place(x=5, y=380, width=670, height=30)
 texto_titulo.configure(font=("Courier", 15, "italic", "bold"))
+# Titulo Adicionar quadros
+texto_add_quadros = Label(menu_1, text='Adicionar Quadros', background='#FF3030')
+texto_add_quadros.place(x=5, y=665, width=670, height=30)
+texto_add_quadros.configure(font=("Courier", 15, "italic", "bold"))
+
+
+
+
 
 # TIPOS DE ARTIGO#####################
 quadro_lb_alterar_todos = Frame(menu_1, borderwidth=1, relief='solid')
-quadro_lb_alterar_todos.place(x=240, y=287, width=160, height=60)
+quadro_lb_alterar_todos.place(x=260, y=287, width=160, height=60)
 # Lista de tipos de artigo
 tipos_artigo = ['PLA', '42', '90']
 lb_tipos_artigo = Label(quadro_lb_alterar_todos, text='Tipo de Artigo')
@@ -11947,7 +11516,7 @@ cb_tipos_artigo.pack()
 # Alterar todos
 # Preço de Embalagens
 quadro_lb_embalagens = Frame(menu_1, borderwidth=1, relief='solid')
-quadro_lb_embalagens.place(x=5, y=525, width=300, height=140)
+quadro_lb_embalagens.place(x=70, y=505, width=300, height=140)
 # titulo Quantidades
 Label(quadro_lb_embalagens, text='Quantidades', anchor=W).place(x=80, y=2, width=100, height=20)
 # titulo Preço unitário
@@ -12009,7 +11578,7 @@ preco_portes_p1.place(x=190, y=100, width=90, height=20)
 # Alterar todos
 # Preço de compra
 quadro_lb_preco_compra = Frame(menu_1, borderwidth=1, relief='solid')
-quadro_lb_preco_compra.place(x=5, y=460, width=300, height=60)
+quadro_lb_preco_compra.place(x=70, y=440, width=300, height=60)
 
 # titulo da entrada preço de compra
 Label(quadro_lb_preco_compra, text='Preço de Compra', anchor=W).place(x=20, y=0, width=100, height=20)
@@ -12029,7 +11598,7 @@ espessura.insert(0, "Manter")
 
 # Cores da Impressão
 quadro_lb_cores_impressao = Frame(menu_1, borderwidth=1, relief='solid')
-quadro_lb_cores_impressao.place(x=310, y=460, width=120, height=186)
+quadro_lb_cores_impressao.place(x=410, y=440, width=120, height=205)
 # Titulo quadro validação de dados Cores da Impressão
 lb_cores_impressao = Label(quadro_lb_cores_impressao, text='Cores da Impressão', height=2)
 lb_cores_impressao.pack()
@@ -12084,7 +11653,7 @@ cb_cores_impressao_7.set('Manter')
 
 # Mais medidas
 quadro_lb_mais_medidas = Frame(menu_1, borderwidth=1, relief='solid')
-quadro_lb_mais_medidas.place(x=435, y=460, width=230, height=186)
+quadro_lb_mais_medidas.place(x=225, y=720, width=230, height=186)
 # Titulo quadro validação de dados para numero de quadros
 lb_mais_medidas = Label(quadro_lb_mais_medidas, text='Adicionar Medidas', height=2)
 lb_mais_medidas.pack()
@@ -12156,10 +11725,10 @@ Label(quadro_lb_mais_medidas, text='Espessura', anchor=E).place(x=155, y=55, wid
 
 # Botao Abrir Janela
 botao_abrir_janela = Button(menu_1, text='CARREGAR PARA FILTRAR', command=lambda: [abrir_janela(), extrair_quadros()])
-botao_abrir_janela.place(x=320, y=700, width=150, height=50)
+botao_abrir_janela.place(x=340, y=935, width=150, height=50)
 # Botao Extrair para o Excel
 botao_abrir_janela = Button(menu_1, text='EXTRAIR PARA EXCEL', command=lambda: [extrair_quadros(), botao_executar()])
-botao_abrir_janela.place(x=150, y=700, width=150, height=50)
+botao_abrir_janela.place(x=170, y=935, width=150, height=50)
 # Variaveis
 v_dimensoes = IntVar(value=1)
 v_unidades = IntVar(value=1)
