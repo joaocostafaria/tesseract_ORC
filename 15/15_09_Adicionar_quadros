@@ -46,6 +46,7 @@ def imprimir_medidas():
         # Recortar localização das Dimensoes do quadro 1
         crop_image_1_dimensoes = crop_image_1[q + 60:a - 20, z:p]
         crop_image_1_dimensoes = cv.cvtColor(crop_image_1_dimensoes, cv.COLOR_BGR2GRAY)
+        cv.imwrite(crop_image_1_dimensoes.jpg, crop_image_1_dimensoes)
         # Reconhecimento do texto da imagem recortada
         pytesseract.pytesseract.tesseract_cmd = Path(j)
         result_1_dimensoes = pytesseract.image_to_string(crop_image_1_dimensoes, config='--psm 6 digits')
@@ -11469,30 +11470,30 @@ def abrir_janela():
 
 menu_1 = Tk()
 # Nome da App
-menu_1.title('Nome do documento')
+menu_1.title('Auto-Cálculo de Orçamento')
 # Cor de fundo
 menu_1.configure(background='#f0f8ff')
 # Dimensoes da tela
-menu_1.geometry("680x1030")
-# Titulo da tela
-texto_titulo = Label(menu_1, text='Documento(.pdf)', background='#FF3030')
-texto_titulo.place(x=220, y=5, width=240, height=50)
-texto_titulo.configure(font=("Courier", 15, "italic", "bold"))
+menu_1.geometry("680x730")
+
+
+
+
 # Arrastar e largar documento
 entry_sv = StringVar()
 entry_sv.set('Largar PDF aqui...')
 entry = Entry(menu_1, textvar=entry_sv, width=80, justify=CENTER, fg="red", font=("Courier", 26, "italic", "bold"))
-entry.place(x=140, y=90, width=400, height=180)
+entry.place(x=120, y=5, width=400, height=50)
 entry.drop_target_register(DND_FILES)
 entry.dnd_bind('<<Drop>>', drop)
 
 # Titulo Alterar todos
 texto_titulo = Label(menu_1, text='Alterar Todos', background='#FF3030')
-texto_titulo.place(x=5, y=380, width=670, height=30)
+texto_titulo.place(x=5, y=140, width=670, height=30)
 texto_titulo.configure(font=("Courier", 15, "italic", "bold"))
 # Titulo Adicionar quadros
 texto_add_quadros = Label(menu_1, text='Adicionar Quadros', background='#FF3030')
-texto_add_quadros.place(x=5, y=665, width=670, height=30)
+texto_add_quadros.place(x=5, y=395, width=670, height=30)
 texto_add_quadros.configure(font=("Courier", 15, "italic", "bold"))
 
 
@@ -11501,7 +11502,7 @@ texto_add_quadros.configure(font=("Courier", 15, "italic", "bold"))
 
 # TIPOS DE ARTIGO#####################
 quadro_lb_alterar_todos = Frame(menu_1, borderwidth=1, relief='solid')
-quadro_lb_alterar_todos.place(x=260, y=287, width=160, height=60)
+quadro_lb_alterar_todos.place(x=260, y=70, width=160, height=60)
 # Lista de tipos de artigo
 tipos_artigo = ['PLA', '42', '90']
 lb_tipos_artigo = Label(quadro_lb_alterar_todos, text='Tipo de Artigo')
@@ -11516,7 +11517,7 @@ cb_tipos_artigo.pack()
 # Alterar todos
 # Preço de Embalagens
 quadro_lb_embalagens = Frame(menu_1, borderwidth=1, relief='solid')
-quadro_lb_embalagens.place(x=120, y=505, width=300, height=140)
+quadro_lb_embalagens.place(x=120, y=245, width=300, height=140)
 # titulo Quantidades
 Label(quadro_lb_embalagens, text='Quantidades', anchor=W).place(x=80, y=2, width=100, height=20)
 # titulo Preço unitário
@@ -11578,7 +11579,7 @@ preco_portes_p1.place(x=190, y=100, width=90, height=20)
 # Alterar todos
 # Preço de compra
 quadro_lb_preco_compra = Frame(menu_1, borderwidth=1, relief='solid')
-quadro_lb_preco_compra.place(x=120, y=440, width=300, height=60)
+quadro_lb_preco_compra.place(x=120, y=180, width=300, height=60)
 
 # titulo da entrada preço de compra
 Label(quadro_lb_preco_compra, text='Preço de Compra', anchor=W).place(x=20, y=0, width=100, height=20)
@@ -11598,7 +11599,7 @@ espessura.insert(0, "Manter")
 
 # Cores da Impressão
 quadro_lb_cores_impressao = Frame(menu_1, borderwidth=1, relief='solid')
-quadro_lb_cores_impressao.place(x=440, y=440, width=120, height=205)
+quadro_lb_cores_impressao.place(x=440, y=180, width=120, height=205)
 # Titulo quadro validação de dados Cores da Impressão
 lb_cores_impressao = Label(quadro_lb_cores_impressao, text='Cores da Impressão', height=2)
 lb_cores_impressao.pack()
@@ -11653,7 +11654,7 @@ cb_cores_impressao_7.set('Manter')
 
 # Mais medidas
 quadro_lb_mais_medidas = Frame(menu_1, borderwidth=1, relief='solid')
-quadro_lb_mais_medidas.place(x=225, y=720, width=230, height=186)
+quadro_lb_mais_medidas.place(x=225, y=430, width=230, height=186)
 # Titulo quadro validação de dados para numero de quadros
 lb_mais_medidas = Label(quadro_lb_mais_medidas, text='Adicionar Medidas', height=2)
 lb_mais_medidas.pack()
@@ -11725,10 +11726,10 @@ Label(quadro_lb_mais_medidas, text='Espessura', anchor=E).place(x=155, y=55, wid
 
 # Botao Abrir Janela
 botao_abrir_janela = Button(menu_1, text='CARREGAR PARA FILTRAR', command=lambda: [abrir_janela(), extrair_quadros()])
-botao_abrir_janela.place(x=340, y=935, width=150, height=50)
+botao_abrir_janela.place(x=340, y=635, width=150, height=50)
 # Botao Extrair para o Excel
 botao_abrir_janela = Button(menu_1, text='EXTRAIR PARA EXCEL', command=lambda: [extrair_quadros(), botao_executar()])
-botao_abrir_janela.place(x=170, y=935, width=150, height=50)
+botao_abrir_janela.place(x=170, y=635, width=150, height=50)
 # Variaveis
 v_dimensoes = IntVar(value=1)
 v_unidades = IntVar(value=1)
